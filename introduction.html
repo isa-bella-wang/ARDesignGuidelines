@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - AR Design Guidelines</title>
+    <link rel="stylesheet" href="apple-styles.css">
+</head>
+<body>
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <div class="secondary-header-content">
+            <a href="index.html" class="secondary-header-logo">AR Guidelines</a>
+            <nav class="secondary-nav">
+                <a href="index.html" class="secondary-nav-link active">Design</a>
+                <a href="#" class="secondary-nav-link">Develop</a>
+                <a href="#" class="secondary-nav-link">Book</a>
+                <a href="#" class="secondary-nav-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-container">
+                <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 5H18M2 10H18M2 15H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" class="filter-input" placeholder="Filter">
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">AR DESIGN GUIDELINES</div>
+                <a href="introduction.html" class="sidebar-nav-item active">
+                    <span class="chevron">></span>
+                    Introduction
+                </a>
+                <a href="getting-started.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Getting Started
+                </a>
+                <div class="sidebar-section-title">FOUNDATIONS</div>
+                <a href="depth-distance-conflict.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Depth, Distance and Conflict
+                </a>
+                <a href="visual-field-placement.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Visual Field Placement
+                </a>
+                <a href="frames-of-reference.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Frames of Reference
+                </a>
+                <a href="readability.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Readability
+                </a>
+                <a href="legibility.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Legibility
+                </a>
+                <a href="information-density.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Information Density
+                </a>
+                <a href="interaction-zones.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Interaction Zones
+                </a>
+                <a href="types-of-input.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Types of Input
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1 class="page-title">Introduction</h1>
+            <p class="page-intro">The AR Guidelines provide research-grounded guidance for designing clear, comfortable, and usable interfaces in augmented reality. The focus of this guide is on translating human perceptual, cognitive, and physical limits into actionable spatial design rules.</p>
+            
+            <p class="section-text">This document is intended to support designers and developers working on real-world AR systems by defining safe, legible, and physically sustainable interface behaviors.</p>
+
+            <!-- How this guide is structured -->
+            <div class="content-section">
+                <h2 class="section-heading">How this guide is structured</h2>
+                <p class="section-text">The guide is organized into three main parts that move from human limits, to application, to validation through use.</p>
+
+                <div class="structure-grid">
+                    <div class="structure-card part-1">
+                        <div class="structure-card-header">
+                            <span class="part-number">PART 1</span>
+                        </div>
+                        <h3 class="structure-card-title">Foundations</h3>
+                        <p class="structure-card-description">Establishes the perceptual and physiological boundaries of human vision, cognition, and physical capability. These chapters define where AR content can exist, how it can be seen, and how users can interact with it.</p>
+                    </div>
+
+                    <div class="structure-card part-2">
+                        <div class="structure-card-header">
+                            <span class="part-number">PART 2</span>
+                        </div>
+                        <h3 class="structure-card-title">Application</h3>
+                        <p class="structure-card-description">Translates foundational limits into concrete design patterns for common AR interface elements like menus, notifications, data overlays, and spatial controls.</p>
+                    </div>
+
+                    <div class="structure-card part-3">
+                        <div class="structure-card-header">
+                            <span class="part-number">PART 3</span>
+                        </div>
+                        <h3 class="structure-card-title">Validation</h3>
+                        <p class="structure-card-description">Provides testing methods and evaluation criteria to verify that interfaces meet comfort, legibility, and usability requirements in real-world conditions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What it covers -->
+            <div class="content-section">
+                <h2 class="section-heading">What this guide covers</h2>
+                <p class="section-text">All recommendations are framed for head-worn, optical see-through AR systems used in real environments.</p>
+                
+                <div class="scope-grid">
+                    <div class="scope-item">
+                        <div class="scope-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="scope-content">
+                            <h4>Visual depth, focus, and field-of-view limits</h4>
+                            <p>How the human visual system constrains where content can be placed in 3D space</p>
+                        </div>
+                    </div>
+
+                    <div class="scope-item">
+                        <div class="scope-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 7h16M4 12h16M4 17h10"/>
+                            </svg>
+                        </div>
+                        <div class="scope-content">
+                            <h4>Readability, legibility, and information density</h4>
+                            <p>How text scales across distance and how much information can be displayed at once</p>
+                        </div>
+                    </div>
+
+                    <div class="scope-item">
+                        <div class="scope-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="scope-content">
+                            <h4>Cognitive load, attention, and task prioritization</h4>
+                            <p>How mental processing limits affect interface complexity and information hierarchy</p>
+                        </div>
+                    </div>
+
+                    <div class="scope-item">
+                        <div class="scope-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                        </div>
+                        <div class="scope-content">
+                            <h4>Physical reach zones, posture, and interaction distance</h4>
+                            <p>Where the body can comfortably reach and sustain interaction over time</p>
+                        </div>
+                    </div>
+
+                    <div class="scope-item">
+                        <div class="scope-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="M12 1v6m0 6v6m6-11h-6m-6 0h6"/>
+                            </svg>
+                        </div>
+                        <div class="scope-content">
+                            <h4>Real-world lighting, motion, and environmental interference</h4>
+                            <p>How changing conditions affect visibility and interaction reliability</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coverage Cards -->
+            <div class="content-section">
+                <div class="coverage-section">
+                    <div class="coverage-card covers">
+                        <div class="coverage-icon">✓</div>
+                        <h3 class="coverage-heading">What it covers</h3>
+                        <ul class="coverage-list">
+                            <li>Visual depth, focus, and field-of-view limits</li>
+                            <li>Readability, legibility, and information density in space</li>
+                            <li>Cognitive load, attention, and task prioritization</li>
+                            <li>Physical reach zones, posture, and interaction distance</li>
+                            <li>Real-world lighting, motion, and environmental interference</li>
+                        </ul>
+                    </div>
+
+                    <div class="coverage-card not-covers">
+                        <div class="coverage-icon">✕</div>
+                        <h3 class="coverage-heading">What it does not cover</h3>
+                        <ul class="coverage-list">
+                            <li>Brand, visual styling, or aesthetic direction</li>
+                            <li>Product management, business strategy, or marketing design</li>
+                            <li>Platform-specific UI components or native widget libraries</li>
+                            <li>Game design, entertainment mechanics, or gesture vocabularies</li>
+                            <li>Hardware engineering, optics fabrication, or device manufacturing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Callout Box -->
+            <div class="key-insight">
+                <h4>The purpose of this guide</h4>
+                <p>This guide does not prescribe visual identity or interaction styles, but defines the human limits within which any AR interface must operate. These constraints form a closed design space governed by the human visual system, cognitive capacity, and physical body—not by screens or tradition.</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add glassmorphism effect to secondary header on scroll
+        const secondaryHeader = document.querySelector('.secondary-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                secondaryHeader.classList.add('scrolled');
+            } else {
+                secondaryHeader.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - AR Design Guidelines</title>
+    <link rel="stylesheet" href="apple-styles.css">
+</head>
+<body>
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <div class="secondary-header-content">
+            <a href="index.html" class="secondary-header-logo">AR Guidelines</a>
+            <nav class="secondary-nav">
+                <a href="index.html" class="secondary-nav-link active">Design</a>
+                <a href="#" class="secondary-nav-link">Develop</a>
+                <a href="#" class="secondary-nav-link">Book</a>
+                <a href="#" class="secondary-nav-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-container">
+                <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 5H18M2 10H18M2 15H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" class="filter-input" placeholder="Filter">
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">AR DESIGN GUIDELINES</div>
+                <a href="introduction.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Introduction
+                </a>
+                <a href="getting-started.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Getting Started
+                </a>
+                <div class="sidebar-section-title">FOUNDATIONS</div>
+                <a href="depth-distance-conflict.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Depth, Distance and Conflict
+                </a>
+                <a href="visual-field-placement.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Visual Field Placement
+                </a>
+                <a href="frames-of-reference.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Frames of Reference
+                </a>
+                <a href="readability.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Readability
+                </a>
+                <a href="legibility.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Legibility
+                </a>
+                <a href="information-density.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Information Density
+                </a>
+                <a href="interaction-zones.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Interaction Zones
+                </a>
+                <a href="types-of-input.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Types of Input
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1 class="page-title">AR Design Guidelines</h1>
+            <p class="page-intro">These guidelines contain research-backed principles and best practices that help you design clear, comfortable, and usable experiences for spatial computing.</p>
+            
+            <p class="instruction-text">As you design interfaces for augmented reality, keep these principles in mind:</p>
+
+            <div class="principles-grid">
+                <!-- Card 1: Physiological Safety -->
+                <div class="principle-card card-1">
+                    <div class="principle-graphic">
+                        <div class="light-ray"></div>
+                        <div class="light-ray"></div>
+                        <div class="light-ray"></div>
+                        <div class="light-ray"></div>
+                        <div class="eye-container">
+                            <div class="eye-outer"></div>
+                            <div class="eye-inner">
+                                <div class="pupil"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="principle-content">
+                        <h2 class="principle-title">Physiological Safety</h2>
+                        <p class="principle-description">Design within visual system limits by placing content at stable depths, respecting field-of-view boundaries, and balancing brightness and transparency</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Cognitive Clarity -->
+                <div class="principle-card card-2">
+                    <div class="principle-graphic">
+                        <div class="brain-network">
+                            <div class="network-node"></div>
+                            <div class="network-node"></div>
+                            <div class="network-node"></div>
+                            <div class="network-node"></div>
+                            <div class="network-node"></div>
+                        </div>
+                    </div>
+                    <div class="principle-content">
+                        <h2 class="principle-title">Cognitive Clarity</h2>
+                        <p class="principle-description">Design within attention and processing limits by prioritizing essential information, reducing visual competition, and revealing detail gradually</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Physical Ergonomics -->
+                <div class="principle-card card-3">
+                    <div class="principle-graphic">
+                        <div class="hand-container">
+                            <div class="reach-circle"></div>
+                            <div class="reach-circle"></div>
+                            <div class="reach-circle"></div>
+                            <div class="hand-icon">
+                                <div class="finger"></div>
+                                <div class="finger"></div>
+                                <div class="finger"></div>
+                                <div class="finger"></div>
+                                <div class="palm"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="principle-content">
+                        <h2 class="principle-title">Physical Ergonomics</h2>
+                        <p class="principle-description">Place interfaces and interaction targets within comfortable reach and viewing zones to prevent fatigue, strain, and unintended motion</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add glassmorphism effect to secondary header on scroll
+        const secondaryHeader = document.querySelector('.secondary-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                secondaryHeader.classList.add('scrolled');
+            } else {
+                secondaryHeader.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

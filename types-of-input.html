@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Input - AR Design Guidelines</title>
+    <link rel="stylesheet" href="apple-styles.css">
+</head>
+<body>
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <div class="secondary-header-content">
+            <a href="index.html" class="secondary-header-logo">AR Guidelines</a>
+            <nav class="secondary-nav">
+                <a href="index.html" class="secondary-nav-link active">Design</a>
+                <a href="#" class="secondary-nav-link">Develop</a>
+                <a href="#" class="secondary-nav-link">Book</a>
+                <a href="#" class="secondary-nav-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-container">
+                <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 5H18M2 10H18M2 15H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" class="filter-input" placeholder="Filter">
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">AR DESIGN GUIDELINES</div>
+                <a href="introduction.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Introduction
+                </a>
+                <a href="getting-started.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Getting Started
+                </a>
+                <div class="sidebar-section-title">FOUNDATIONS</div>
+                <a href="depth-distance-conflict.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Depth, Distance and Conflict
+                </a>
+                <a href="visual-field-placement.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Visual Field Placement
+                </a>
+                <a href="frames-of-reference.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Frames of Reference
+                </a>
+                <a href="readability.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Readability
+                </a>
+                <a href="legibility.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Legibility
+                </a>
+                <a href="information-density.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Information Density
+                </a>
+                <a href="interaction-zones.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Interaction Zones
+                </a>
+                <a href="types-of-input.html" class="sidebar-nav-item active">
+                    <span class="chevron">></span>
+                    Types of Input
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero -->
+            <header class="hero-section">
+                <div class="hero-label">
+                    <span class="hero-label-dot"></span>
+                    <span>Part I · Input & Interaction</span>
+                </div>
+                <h1 class="page-title">Input Types</h1>
+                <p class="page-intro">
+                    Input preference is task-dependent, dynamic, and multimodal.
+                    Interaction design cannot be divorced from environmental constraints.
+                </p>
+                <div class="hero-note">
+                    <span class="hero-note-pill">Principle</span>
+                    <span>Context-adaptive frameworks over one-size-fits-all guidelines.</span>
+                </div>
+            </header>
+
+            <!-- Comparison section -->
+            <section class="section" aria-labelledby="comparison-heading">
+                <div class="section-header">
+                    <h2 class="section-title" id="comparison-heading">
+                        Input Type Comparison
+                    </h2>
+                    <p class="section-subtitle">
+                        High-level tradeoffs across modalities. Use this to choose defaults,
+                        not to lock users into a single input.
+                    </p>
+                </div>
+
+                <div class="comparison-table">
+                    <div class="table-row header">
+                        <div class="table-cell">Input Type</div>
+                        <div class="table-cell">Fastest For</div>
+                        <div class="table-cell">Weakest At</div>
+                        <div class="table-cell">Best Context</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="input-pill">
+                                <div class="input-icon">✋</div>
+                                <span class="input-label">Hand</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">Spatial manipulation</div>
+                        <div class="table-cell">Precision selection</div>
+                        <div class="table-cell">Data exploration, XR manipulation</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="input-pill">
+                                <div class="input-icon">🎮</div>
+                                <span class="input-label">Controller</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">Structured button tasks</div>
+                        <div class="table-cell">Free 3D tasks</div>
+                        <div class="table-cell">Interfaces with discrete controls</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="input-pill">
+                                <div class="input-icon">🎤</div>
+                                <span class="input-label">Voice</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">Intent communication</div>
+                        <div class="table-cell">Noisy environments</div>
+                        <div class="table-cell">Hands-free contexts</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="input-pill">
+                                <div class="input-icon">🗣️</div>
+                                <span class="input-label">Head</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">Menu navigation when hands occupied</div>
+                        <div class="table-cell">Fine manipulation</div>
+                        <div class="table-cell">To be avoided as a primary input</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="input-pill">
+                                <div class="input-icon">👁️</div>
+                                <span class="input-label">Gaze</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">Rapid selection</div>
+                        <div class="table-cell">Manipulation</div>
+                        <div class="table-cell">Low-effort pointing</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="input-pill">
+                                <div class="input-icon">🔄</div>
+                                <span class="input-label">Multimodal</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">Complex tasks, preference</div>
+                        <div class="table-cell">Poorly matched outputs</div>
+                        <div class="table-cell">Adaptable AR systems</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards section -->
+            <section class="section" aria-labelledby="cards-heading">
+                <div class="section-header">
+                    <h2 class="section-title" id="cards-heading">
+                        Modalities in Practice
+                    </h2>
+                    <p class="section-subtitle">
+                        Each input type is most effective when matched to the task, the body,
+                        and the environment it operates in.
+                    </p>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Hand -->
+                    <article class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon">✋</div>
+                                <div class="card-name">Hands</div>
+                            </div>
+                            <span class="chip">Embodied control</span>
+                        </div>
+                        <div class="card-body">
+                            Gestures, hand-tracking, and bimanual volumetric manipulation.
+                            Leverages natural embodied strategies but can be inconsistent.
+                            Tracking noise and lack of haptic feedback reduce precision.
+                        </div>
+                        <div class="card-metadata">
+                            <div class="meta-item">Fastest for fine-tuning</div>
+                            <div class="meta-item">Lower precision than controller</div>
+                        </div>
+                        <div class="card-footer-label">Best for</div>
+                        <div class="card-footer-tags">
+                            <span class="tag">Manipulation-heavy tasks</span>
+                            <span class="tag">Spatial reasoning</span>
+                            <span class="tag">Data exploration</span>
+                            <span class="tag">Volumetric interaction</span>
+                        </div>
+                    </article>
+
+                    <!-- Controller -->
+                    <article class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon">🎮</div>
+                                <div class="card-name">Controller</div>
+                            </div>
+                            <span class="chip">Structured input</span>
+                        </div>
+                        <div class="card-body">
+                            Hand-held devices like pointers and remotes. Fastest modality for
+                            structured tasks with high reliability and predictability. Lower
+                            cognitive load than free-hand tracking.
+                        </div>
+                        <div class="card-metadata">
+                            <div class="meta-item">Fastest overall</div>
+                            <div class="meta-item">Highest reliability</div>
+                        </div>
+                        <div class="card-footer-label">Best for</div>
+                        <div class="card-footer-tags">
+                            <span class="tag">Structured UI</span>
+                            <span class="tag">Object selection</span>
+                            <span class="tag">Repeatable precision tasks</span>
+                        </div>
+                    </article>
+
+                    <!-- Voice -->
+                    <article class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon">🎤</div>
+                                <div class="card-name">Voice</div>
+                            </div>
+                            <span class="chip">Hands-free</span>
+                        </div>
+                        <div class="card-body">
+                            Speech commands for hands-free interaction. More consistent than
+                            gestures and ideal for high-level commands. Sensitive to ambient
+                            noise and linguistic ambiguity.
+                        </div>
+                        <div class="card-metadata">
+                            <div class="meta-item">Hands-free: Yes</div>
+                            <div class="meta-item">Noise sensitive</div>
+                        </div>
+                        <div class="card-footer-label">Best for</div>
+                        <div class="card-footer-tags">
+                            <span class="tag">Hands-free interaction</span>
+                            <span class="tag">Narrative tasks</span>
+                            <span class="tag">Intention-level commands</span>
+                            <span class="tag">Non-visual instructions</span>
+                        </div>
+                    </article>
+
+                    <!-- Head -->
+                    <article class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon">🗣️</div>
+                                <div class="card-name">Head control</div>
+                            </div>
+                            <span class="chip">Fallback</span>
+                        </div>
+                        <div class="card-body">
+                            Cursor or menu selection using head tilt/orientation. Robust to
+                            occlusion and noise. Works in hands-occupied settings but can be
+                            fatiguing with continual motion.
+                        </div>
+                        <div class="card-metadata">
+                            <div class="meta-item">High robustness</div>
+                            <div class="meta-item">Moderate–high fatigue</div>
+                        </div>
+                        <div class="card-footer-label">Best for</div>
+                        <div class="card-footer-tags">
+                            <span class="tag">Hands + voice unavailable</span>
+                            <span class="tag">Menu navigation</span>
+                            <span class="tag">Industrial / surgical constraints</span>
+                        </div>
+                    </article>
+
+                    <!-- Gaze -->
+                    <article class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon">👁️</div>
+                                <div class="card-name">Gaze</div>
+                            </div>
+                            <span class="chip">Zero-effort pointing</span>
+                        </div>
+                        <div class="card-body">
+                            Using eyes as controller. Fastest modality for simple selections
+                            with near-zero effort. Poor for manipulation and requires careful
+                            dwell / confirmation design.
+                        </div>
+                        <div class="card-metadata">
+                            <div class="meta-item">Fastest for selection</div>
+                            <div class="meta-item">Very low cognitive load</div>
+                        </div>
+                        <div class="card-footer-label">Best for</div>
+                        <div class="card-footer-tags">
+                            <span class="tag">Selection tasks</span>
+                            <span class="tag">Target detection</span>
+                            <span class="tag">When hands must be stable</span>
+                        </div>
+                    </article>
+
+                    <!-- Multimodal -->
+                    <article class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon">🔄</div>
+                                <div class="card-name">Multimodal</div>
+                            </div>
+                            <span class="chip">Preferred</span>
+                        </div>
+                        <div class="card-body">
+                            Combination of two or more input types. Reduces cognitive load when
+                            modalities complement each other. Supports redundancy and adaptive
+                            fallback. Most preferred by users overall.
+                        </div>
+                        <div class="card-metadata">
+                            <div class="meta-item">Highest adaptability</div>
+                            <div class="meta-item">Generally preferred</div>
+                        </div>
+                        <div class="card-footer-label">Best for</div>
+                        <div class="card-footer-tags">
+                            <span class="tag">Complex tasks</span>
+                            <span class="tag">Flexible systems</span>
+                            <span class="tag">User preference</span>
+                            <span class="tag">Environmental adaptation</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Interactive demo -->
+            <section class="section" aria-labelledby="demo-heading">
+                <div class="section-header">
+                    <h2 class="section-title" id="demo-heading">
+                        Interactive Input Demo
+                    </h2>
+                    <p class="section-subtitle">
+                        Tap a modality to preview its strengths, caveats, and when to make it
+                        the default.
+                    </p>
+                </div>
+
+                <div class="demo-layout">
+                    <div class="demo-controls">
+                        <div class="demo-control-label">Modalities</div>
+
+                        <button class="demo-button" data-input="hand" type="button">
+                            <span>
+                                <span class="demo-button-emoji">✋</span>
+                                <span>Hand</span>
+                            </span>
+                            <span class="demo-button-indicator"></span>
+                        </button>
+
+                        <button class="demo-button" data-input="controller" type="button">
+                            <span>
+                                <span class="demo-button-emoji">🎮</span>
+                                <span>Controller</span>
+                            </span>
+                            <span class="demo-button-indicator"></span>
+                        </button>
+
+                        <button class="demo-button" data-input="voice" type="button">
+                            <span>
+                                <span class="demo-button-emoji">🎤</span>
+                                <span>Voice</span>
+                            </span>
+                            <span class="demo-button-indicator"></span>
+                        </button>
+
+                        <button class="demo-button" data-input="head" type="button">
+                            <span>
+                                <span class="demo-button-emoji">🗣️</span>
+                                <span>Head</span>
+                            </span>
+                            <span class="demo-button-indicator"></span>
+                        </button>
+
+                        <button class="demo-button" data-input="gaze" type="button">
+                            <span>
+                                <span class="demo-button-emoji">👁️</span>
+                                <span>Gaze</span>
+                            </span>
+                            <span class="demo-button-indicator"></span>
+                        </button>
+
+                        <button class="demo-button" data-input="multimodal" type="button">
+                            <span>
+                                <span class="demo-button-emoji">🔄</span>
+                                <span>Multimodal</span>
+                            </span>
+                            <span class="demo-button-indicator"></span>
+                        </button>
+                    </div>
+
+                    <div class="demo-display">
+                        <div class="demo-display-header">
+                            <div class="demo-label">Preview</div>
+                            <div class="demo-current" id="demo-current">
+                                Hand · natural spatial manipulation
+                            </div>
+                        </div>
+
+                        <!-- Hand -->
+                        <div class="demo-content" data-content="hand">
+                            <div class="demo-main">
+                                <div class="demo-icon">✋</div>
+                                <div>
+                                    <div class="demo-copy-title">
+                                        Natural spatial manipulation with your hands
+                                    </div>
+                                    <div class="demo-copy-body">
+                                        Use for grabbing, rotating, and shaping volumetric content.
+                                        Avoid relying on small targets or pixel-perfect precision.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-meta">
+                                <div class="demo-meta-pill">Best: manipulation-heavy tasks</div>
+                                <div class="demo-meta-pill">Avoid: tiny tap targets</div>
+                            </div>
+                        </div>
+
+                        <!-- Controller -->
+                        <div class="demo-content" data-content="controller">
+                            <div class="demo-main">
+                                <div class="demo-icon">🎮</div>
+                                <div>
+                                    <div class="demo-copy-title">
+                                        Precise and reliable dedicated hardware
+                                    </div>
+                                    <div class="demo-copy-body">
+                                        Use when you need predictable, repeatable actions and fast
+                                        navigation through structured interfaces.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-meta">
+                                <div class="demo-meta-pill">Best: menu-heavy workflows</div>
+                                <div class="demo-meta-pill">Avoid: pure gestural tasks</div>
+                            </div>
+                        </div>
+
+                        <!-- Voice -->
+                        <div class="demo-content" data-content="voice">
+                            <div class="demo-main">
+                                <div class="demo-icon">🎤</div>
+                                <div>
+                                    <div class="demo-copy-title">
+                                        Hands-free commands with speech
+                                    </div>
+                                    <div class="demo-copy-body">
+                                        Ideal for high-level intentions: "show reviews", "compare
+                                        shades", "bookmark this". Design graceful failure states for
+                                        misrecognition.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-meta">
+                                <div class="demo-meta-pill">Best: overview + navigation</div>
+                                <div class="demo-meta-pill">Avoid: noisy environments</div>
+                            </div>
+                        </div>
+
+                        <!-- Head -->
+                        <div class="demo-content" data-content="head">
+                            <div class="demo-main">
+                                <div class="demo-icon">🗣️</div>
+                                <div>
+                                    <div class="demo-copy-title">
+                                        Navigate with head orientation
+                                    </div>
+                                    <div class="demo-copy-body">
+                                        Use as a fallback when hands and voice are constrained.
+                                        Keep motions small and discrete to avoid fatigue and nausea.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-meta">
+                                <div class="demo-meta-pill">Best: constrained environments</div>
+                                <div class="demo-meta-pill">Avoid: continuous control</div>
+                            </div>
+                        </div>
+
+                        <!-- Gaze -->
+                        <div class="demo-content" data-content="gaze">
+                            <div class="demo-main">
+                                <div class="demo-icon">👁️</div>
+                                <div>
+                                    <div class="demo-copy-title">
+                                        Point and select with your eyes
+                                    </div>
+                                    <div class="demo-copy-body">
+                                        Reserve for selection, not manipulation. Combine with dwell
+                                        timers, confirmations, or secondary inputs to avoid "Midas
+                                        touch".
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-meta">
+                                <div class="demo-meta-pill">Best: single-step selection</div>
+                                <div class="demo-meta-pill">Avoid: dragging & resizing</div>
+                            </div>
+                        </div>
+
+                        <!-- Multimodal -->
+                        <div class="demo-content" data-content="multimodal">
+                            <div class="demo-main">
+                                <div class="demo-icon">🔄</div>
+                                <div>
+                                    <div class="demo-copy-title">
+                                        Combine modalities for real-world tasks
+                                    </div>
+                                    <div class="demo-copy-body">
+                                        Pair gaze + pinch, voice + controller, or hand + head for
+                                        redundancy. Let users fluidly switch based on context.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-meta">
+                                <div class="demo-meta-pill">Best: complex AR workflows</div>
+                                <div class="demo-meta-pill">Avoid: conflicting mappings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                        <!-- Key Insight -->
+             <div class="key-insight">
+                <h4>Design Principle for AR Input Type Selection</h4>
+                 <p>
+                 Legibility in AR requires careful attention to orientation, brightness, transparency, and color selection. Use billboarding to keep text facing users, with optimal tilt between -5° and +20°. Adapt display brightness to ambient conditions (500-10,000 nits depending on environment). Maintain opacity between 25-75% for balance between visibility and see-through capability. Prioritize blue for primary UI and warnings, use green and yellow for secondary elements, and avoid red and brown for critical information. These evidence-based guidelines ensure consistent character recognition across varying real-world conditions.
+                 </p>
+            </div>
+
+            <!-- Navigation Footer -->
+            <div class="nav-footer">
+                <a href="interaction-zones.html" class="nav-button prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Interaction Zones
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add glassmorphism effect to secondary header on scroll
+        const secondaryHeader = document.querySelector('.secondary-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                secondaryHeader.classList.add('scrolled');
+            } else {
+                secondaryHeader.classList.remove('scrolled');
+            }
+        });
+
+        // Interactive Input Demo
+        const buttons = document.querySelectorAll(".demo-button");
+        const contents = document.querySelectorAll(".demo-content");
+        const currentLabel = document.getElementById("demo-current");
+
+        const copyByInput = {
+            hand: "Hand · natural spatial manipulation",
+            controller: "Controller · structured, precise control",
+            voice: "Voice · hands-free intent communication",
+            head: "Head · robust fallback in constrained contexts",
+            gaze: "Gaze · rapid low-effort selection",
+            multimodal: "Multimodal · combine inputs for complex tasks",
+        };
+
+        function setActive(inputType) {
+            buttons.forEach((btn) => {
+                btn.classList.toggle("active", btn.dataset.input === inputType);
+            });
+
+            contents.forEach((el) => {
+                el.classList.toggle("active", el.dataset.content === inputType);
+            });
+
+            if (currentLabel) {
+                currentLabel.textContent = copyByInput[inputType] || "";
+            }
+        }
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                setActive(button.dataset.input);
+            });
+        });
+
+        // Default state
+        setActive("hand");
+    </script>
+</body>
+</html>

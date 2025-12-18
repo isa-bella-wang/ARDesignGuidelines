@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction Zones - AR Design Guidelines</title>
+    <link rel="stylesheet" href="apple-styles.css">
+</head>
+<body>
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <div class="secondary-header-content">
+            <a href="index.html" class="secondary-header-logo">AR Guidelines</a>
+            <nav class="secondary-nav">
+                <a href="index.html" class="secondary-nav-link active">Design</a>
+                <a href="#" class="secondary-nav-link">Develop</a>
+                <a href="#" class="secondary-nav-link">Book</a>
+                <a href="#" class="secondary-nav-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-container">
+                <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 5H18M2 10H18M2 15H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" class="filter-input" placeholder="Filter">
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">AR DESIGN GUIDELINES</div>
+                <a href="introduction.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Introduction
+                </a>
+                <a href="getting-started.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Getting Started
+                </a>
+                <div class="sidebar-section-title">FOUNDATIONS</div>
+                <a href="depth-distance-conflict.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Depth, Distance and Conflict
+                </a>
+                <a href="visual-field-placement.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Visual Field Placement
+                </a>
+                <a href="frames-of-reference.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Frames of Reference
+                </a>
+                <a href="readability.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Readability
+                </a>
+                <a href="legibility.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Legibility
+                </a>
+                <a href="information-density.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Information Density
+                </a>
+                <a href="interaction-zones.html" class="sidebar-nav-item active">
+                    <span class="chevron">></span>
+                    Interaction Zones
+                </a>
+                <a href="types-of-input.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Types of Input
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="hero-section">
+                <h1 class="page-title">Interaction Zones</h1>
+                <p class="page-intro">How anthropometric reach zones determine where interactions should occur in AR experiences, and recommendations for respective UI in each zone.</p>
+            </header>
+
+            
+
+            <!-- Main visualization -->
+            <section class="visualization-section">
+                <h2 class="section-heading">Understanding Reach Zones</h2>
+                
+                <div class="human-figure-container">
+                    <!-- Reach zones (back to front) -->
+                    <div class="reach-zone zone-3">
+                        <span class="zone-label">Zone 3</span>
+                        <span class="zone-distance">19-25 inches</span>
+                    </div>
+                    <div class="reach-zone zone-2">
+                        <span class="zone-label">Zone 2</span>
+                        <span class="zone-distance">15-19 inches</span>
+                    </div>
+                    <div class="reach-zone zone-1">
+                        <span class="zone-label">Zone 1</span>
+                        <span class="zone-distance">Up to 14 inches</span>
+                    </div>
+
+                    <!-- Human figure -->
+                    <div class="human-figure">
+                        <div class="head"></div>
+                        <div class="torso">
+                            <div class="arm left"></div>
+                            <div class="arm right"></div>
+                        </div>
+                        <div class="legs">
+                            <div class="leg"></div>
+                            <div class="leg"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; color: rgba(255, 255, 255, 0.6); margin-top: 30px; font-style: italic;">
+                    Hover over zones to explore their ergonomic boundaries
+                </p>
+            </section>
+
+            <!-- Zone details cards -->
+            <div class="zones-grid">
+                <!-- Zone 1 -->
+                <div class="zone-card">
+                    <div class="zone-graphic">
+                        <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <pattern id="grid1" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(78, 205, 196, 0.1)" stroke-width="0.5"/>
+                                </pattern>
+                                <linearGradient id="armGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgba(78, 205, 196, 0.8);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:rgba(78, 205, 196, 0.3);stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="180" fill="url(#grid1)"/>
+                            <circle cx="50" cy="90" r="8" fill="rgba(78, 205, 196, 0.5)"/>
+                            <circle cx="50" cy="90" r="4" fill="#4ecdc4"/>
+                            <g class="arm-bent" style="transform-origin: 50px 90px;">
+                                <line x1="50" y1="90" x2="120" y2="80" stroke="url(#armGrad1)" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="120" cy="80" r="6" fill="rgba(78, 205, 196, 0.6)"/>
+                                <circle cx="120" cy="80" r="3" fill="#4ecdc4"/>
+                                <line x1="120" y1="80" x2="180" y2="90" stroke="url(#armGrad1)" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="180" cy="90" r="10" fill="rgba(78, 205, 196, 0.3)" stroke="#4ecdc4" stroke-width="2"/>
+                            </g>
+                            <line x1="50" y1="140" x2="180" y2="140" stroke="#4ecdc4" stroke-width="1.5" stroke-dasharray="3,3"/>
+                            <text x="115" y="155" fill="#4ecdc4" font-size="12" text-anchor="middle" font-weight="600">14"</text>
+                            <path d="M 70 90 A 20 20 0 0 1 75 75" stroke="#4ecdc4" stroke-width="1.5" fill="none"/>
+                            <text x="80" y="75" fill="#4ecdc4" font-size="10" font-weight="600">&lt;30°</text>
+                        </svg>
+                        <div class="comfort-indicator">
+                            <span>Comfort:</span>
+                            <div class="comfort-dots">
+                                <div class="comfort-dot"></div>
+                                <div class="comfort-dot"></div>
+                                <div class="comfort-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="zone-card-content">
+                        <div class="zone-card-header">
+                            <div class="zone-number">1</div>
+                            <h3>Primary Zone</h3>
+                        </div>
+                        
+                        <div class="zone-frequency">5+ reaches per minute</div>
+                        
+                        <p>The optimal interaction zone characterized by bent elbow movements. This area minimizes fatigue and reduces risk of musculoskeletal disorders.</p>
+                        
+                        <div class="zone-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Horizontal Reach</span>
+                                <span class="spec-value">Up to 14"</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Vertical Range</span>
+                                <span class="spec-value">±6"</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Shoulder Angle</span>
+                                <span class="spec-value">&lt;30°</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Comfort Level</span>
+                                <span class="spec-value">Highest</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ui-examples">
+                            <h4>Ideal UI Elements:</h4>
+                            <div class="ui-tags">
+                                <span class="ui-tag">Main Panel</span>
+                                <span class="ui-tag">Primary Actions</span>
+                                <span class="ui-tag">Critical Controls</span>
+                                <span class="ui-tag">Frequent Tasks</span>
+                                <span class="ui-tag">Navigation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zone 2 -->
+                <div class="zone-card">
+                    <div class="zone-graphic">
+                        <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 195, 113, 0.1)" stroke-width="0.5"/>
+                                </pattern>
+                                <linearGradient id="armGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgba(255, 195, 113, 0.8);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:rgba(255, 195, 113, 0.3);stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="180" fill="url(#grid2)"/>
+                            <circle cx="40" cy="90" r="8" fill="rgba(255, 195, 113, 0.5)"/>
+                            <circle cx="40" cy="90" r="4" fill="#ffc371"/>
+                            <g class="arm-extended" style="transform-origin: 40px 90px;">
+                                <line x1="40" y1="90" x2="130" y2="60" stroke="url(#armGrad2)" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="130" cy="60" r="6" fill="rgba(255, 195, 113, 0.6)"/>
+                                <circle cx="130" cy="60" r="3" fill="#ffc371"/>
+                                <line x1="130" y1="60" x2="220" y2="70" stroke="url(#armGrad2)" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="220" cy="70" r="10" fill="rgba(255, 195, 113, 0.3)" stroke="#ffc371" stroke-width="2"/>
+                            </g>
+                            <line x1="40" y1="140" x2="220" y2="140" stroke="#ffc371" stroke-width="1.5" stroke-dasharray="3,3"/>
+                            <text x="130" y="155" fill="#ffc371" font-size="12" text-anchor="middle" font-weight="600">15-19"</text>
+                            <path d="M 60 90 A 25 25 0 0 1 55 60" stroke="#ffc371" stroke-width="1.5" fill="none"/>
+                            <text x="70" y="65" fill="#ffc371" font-size="10" font-weight="600">30-60°</text>
+                            <path d="M 130 40 Q 135 35 140 40 T 150 40" stroke="rgba(255, 195, 113, 0.5)" stroke-width="2" fill="none"/>
+                        </svg>
+                        <div class="comfort-indicator">
+                            <span>Comfort:</span>
+                            <div class="comfort-dots">
+                                <div class="comfort-dot"></div>
+                                <div class="comfort-dot"></div>
+                                <div class="comfort-dot inactive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="zone-card-content">
+                        <div class="zone-card-header">
+                            <div class="zone-number">2</div>
+                            <h3>Secondary Zone</h3>
+                        </div>
+                        
+                        <div class="zone-frequency">1-5 reaches per minute</div>
+                        
+                        <p>Reachable with arm extension but not full stretch. Requires sustained deltoid and rotator cuff contraction, leading to moderate fatigue over time.</p>
+                        
+                        <div class="zone-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Horizontal Reach</span>
+                                <span class="spec-value">15-19"</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Vertical Range</span>
+                                <span class="spec-value">6-12"</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Shoulder Angle</span>
+                                <span class="spec-value">30-60°</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Comfort Level</span>
+                                <span class="spec-value">Moderate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ui-examples">
+                            <h4>Ideal UI Elements:</h4>
+                            <div class="ui-tags">
+                                <span class="ui-tag">Next Button</span>
+                                <span class="ui-tag">Settings</span>
+                                <span class="ui-tag">Adjustments</span>
+                                <span class="ui-tag">Secondary Options</span>
+                                <span class="ui-tag">Filters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zone 3 -->
+                <div class="zone-card">
+                    <div class="zone-graphic">
+                        <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <pattern id="grid3" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 107, 107, 0.1)" stroke-width="0.5"/>
+                                </pattern>
+                                <linearGradient id="armGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgba(255, 107, 107, 0.8);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:rgba(255, 107, 107, 0.3);stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="180" fill="url(#grid3)"/>
+                            <circle cx="30" cy="100" r="8" fill="rgba(255, 107, 107, 0.5)"/>
+                            <circle cx="30" cy="100" r="4" fill="#ff6b6b"/>
+                            <g class="arm-full" style="transform-origin: 30px 100px;">
+                                <line x1="30" y1="100" x2="140" y2="40" stroke="url(#armGrad3)" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="140" cy="40" r="6" fill="rgba(255, 107, 107, 0.6)"/>
+                                <circle cx="140" cy="40" r="3" fill="#ff6b6b"/>
+                                <line x1="140" y1="40" x2="260" y2="50" stroke="url(#armGrad3)" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="260" cy="50" r="10" fill="rgba(255, 107, 107, 0.3)" stroke="#ff6b6b" stroke-width="2"/>
+                            </g>
+                            <line x1="30" y1="150" x2="260" y2="150" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="3,3"/>
+                            <text x="145" y="165" fill="#ff6b6b" font-size="12" text-anchor="middle" font-weight="600">19-25"</text>
+                            <path d="M 50 100 A 30 30 0 0 1 40 65" stroke="#ff6b6b" stroke-width="1.5" fill="none"/>
+                            <text x="60" y="75" fill="#ff6b6b" font-size="10" font-weight="600">&gt;60°</text>
+                            <path d="M 140 20 Q 145 15 150 20 T 160 20" stroke="rgba(255, 107, 107, 0.6)" stroke-width="2" fill="none"/>
+                            <path d="M 80 70 Q 85 65 90 70 T 100 70" stroke="rgba(255, 107, 107, 0.6)" stroke-width="2" fill="none"/>
+                            <path d="M 200 30 Q 205 25 210 30 T 220 30" stroke="rgba(255, 107, 107, 0.6)" stroke-width="2" fill="none"/>
+                            <g transform="translate(270, 15)">
+                                <polygon points="15,5 5,25 25,25" fill="none" stroke="#ff6b6b" stroke-width="2"/>
+                                <text x="15" y="20" fill="#ff6b6b" font-size="14" text-anchor="middle" font-weight="bold">!</text>
+                            </g>
+                        </svg>
+                        <div class="comfort-indicator">
+                            <span>Comfort:</span>
+                            <div class="comfort-dots">
+                                <div class="comfort-dot"></div>
+                                <div class="comfort-dot inactive"></div>
+                                <div class="comfort-dot inactive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="zone-card-content">
+                        <div class="zone-card-header">
+                            <div class="zone-number">3</div>
+                            <h3>Tertiary Zone</h3>
+                        </div>
+                        
+                        <div class="zone-frequency">&lt;1 reach per minute</div>
+                        
+                        <p>Requires full arm extension (180°), increasing joint stress and muscle fatigue. May require posture shifts, affecting balance and increasing strain.</p>
+                        
+                        <div class="zone-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Horizontal Reach</span>
+                                <span class="spec-value">19-25"</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Vertical Range</span>
+                                <span class="spec-value">&gt;12"</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Shoulder Angle</span>
+                                <span class="spec-value">&gt;60°</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Comfort Level</span>
+                                <span class="spec-value">Low</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ui-examples">
+                            <h4>Ideal UI Elements:</h4>
+                            <div class="ui-tags">
+                                <span class="ui-tag">Terms of Service</span>
+                                <span class="ui-tag">Permissions</span>
+                                <span class="ui-tag">Archive</span>
+                                <span class="ui-tag">Advanced Settings</span>
+                                <span class="ui-tag">Rare Actions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning section -->
+            <section class="warning-section">
+                <h3>Ergonomic Risk: Beyond Zone 3</h3>
+                <p>
+                    Placing interactive elements beyond 25 inches poses significant ergonomic risk. Continuous arm elevation leads to neck and shoulder pain, increased joint stress, and rapid muscle fatigue. 
+                    Interfaces positioned too high or too far require users to deviate from neutral posture, which can cause lasting discomfort and potential injury with repeated use. 
+                    <strong>Always keep interactive elements within the three defined zones.</strong>
+                </p>
+            </section>
+
+            <!-- Vertical Reach Zones Interactive Demo -->
+            <section class="interactive-demo vertical-reach-demo">
+                <h2 class="section-heading">Vertical Reach Zones</h2>
+                
+                <div class="vertical-reach-content">
+                    <!-- Zone selection buttons -->
+                    <div class="zone-buttons">
+                        <button class="zone-button green" data-vertical-zone="green" data-y="215">
+                            <span class="zone-button-title">+6 inches</span>
+                            <span class="zone-button-subtitle">Optimal Zone</span>
+                        </button>
+                        <button class="zone-button blue" data-vertical-zone="blue" data-y="140">
+                            <span class="zone-button-title">+12 inches</span>
+                            <span class="zone-button-subtitle">Secondary Zone</span>
+                        </button>
+                        <button class="zone-button purple" data-vertical-zone="purple" data-y="265">
+                            <span class="zone-button-title">-3 inches</span>
+                            <span class="zone-button-subtitle">Lower Zone</span>
+                        </button>
+                        <button class="zone-button red" data-vertical-zone="risk-top" data-y="70">
+                            <span class="zone-button-title">+24 inches</span>
+                            <span class="zone-button-subtitle">Risk Zone</span>
+                        </button>
+                    </div>
+                
+                    <div class="vertical-viz-container">
+                        <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <!-- Clip path to crop body from mid-thigh up -->
+                                <clipPath id="bodyClip">
+                                    <rect x="0" y="0" width="600" height="280"/>
+                                </clipPath>
+                                <!-- Grid pattern -->
+                                <pattern id="gridVertical" width="30" height="30" patternUnits="userSpaceOnUse">
+                                    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                                </pattern>
+                                <!-- Zone gradients -->
+                                <linearGradient id="greenZone" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgb(76,175,80);stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:rgb(76,175,80);stop-opacity:0.5" />
+                                </linearGradient>
+                                <linearGradient id="blueZone" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgb(33,150,243);stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:rgb(33,150,243);stop-opacity:0.5" />
+                                </linearGradient>
+                                <linearGradient id="purpleZone" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgb(156,39,176);stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:rgb(156,39,176);stop-opacity:0.5" />
+                                </linearGradient>
+                                <linearGradient id="redZoneTop" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgb(244,67,54);stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:rgb(244,67,54);stop-opacity:0.5" />
+                                </linearGradient>
+                                <linearGradient id="redZoneBottom" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgb(244,67,54);stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:rgb(244,67,54);stop-opacity:0.5" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Background grid -->
+                            <rect width="600" height="600" fill="url(#gridVertical)"/>
+                            <!-- Reference frame (starts at thigh level, height of person, bottom aligns with cropped body) -->
+                            <rect x="250" y="50" width="200" height="280" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                            <!-- Zones (back to front) - adjusted to match person height from thigh -->
+                            <!-- Top Ergonomic Risk (+24 inches) -->
+                            <g class="zone-area" data-zone="top-risk">
+                                <rect x="250" y="50" width="200" height="40" fill="url(#redZoneTop)" stroke="rgb(244,67,54)" stroke-width="2" opacity="0.8">
+                                    <animate attributeName="opacity" values="0.8;0.6;0.8" dur="3s" repeatCount="indefinite"/>
+                                </rect>
+                                <line x1="450" y1="70" x2="520" y2="70" stroke="rgb(244,67,54)" stroke-width="2" stroke-dasharray="5,5"/>
+                            </g>
+                            <!-- Blue Zone (+12 inches) - doubled height -->
+                            <g class="zone-area" data-zone="blue">
+                                <rect x="250" y="90" width="200" height="100" fill="url(#blueZone)" stroke="rgb(33,150,243)" stroke-width="2" opacity="0.8">
+                                    <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+                                </rect>
+                                <line x1="450" y1="140" x2="520" y2="140" stroke="rgb(33,150,243)" stroke-width="2" stroke-dasharray="5,5"/>
+                            </g>
+                            <!-- Green Zone (+6 inches) -->
+                            <g class="zone-area" data-zone="green">
+                                <rect x="250" y="190" width="200" height="50" fill="url(#greenZone)" stroke="rgb(76,175,80)" stroke-width="2" opacity="0.8">
+                                    <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="1s" repeatCount="indefinite"/>
+                                </rect>
+                                <line x1="450" y1="215" x2="520" y2="215" stroke="rgb(76,175,80)" stroke-width="2" stroke-dasharray="5,5"/>
+                            </g>
+                            <!-- Purple Zone (-3 inches) -->
+                            <g class="zone-area" data-zone="purple">
+                                <rect x="250" y="240" width="200" height="50" fill="url(#purpleZone)" stroke="rgb(156,39,176)" stroke-width="2" opacity="0.8">
+                                    <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+                                </rect>
+                                <line x1="450" y1="265" x2="520" y2="265" stroke="rgb(156,39,176)" stroke-width="2" stroke-dasharray="5,5"/>
+                            </g>
+                            <!-- Bottom Ergonomic Risk -->
+                            <g class="zone-area" data-zone="bottom-risk">
+                                <rect x="250" y="290" width="200" height="40" fill="url(#redZoneBottom)" stroke="rgb(244,67,54)" stroke-width="2" opacity="0.8">
+                                    <animate attributeName="opacity" values="0.8;0.6;0.8" dur="3s" begin="2s" repeatCount="indefinite"/>
+                                </rect>
+                                <line x1="450" y1="310" x2="520" y2="310" stroke="rgb(244,67,54)" stroke-width="2" stroke-dasharray="5,5"/>
+                            </g>
+                            <!-- Human figure from SVG (clipped from mid-thigh up) -->
+                            <g transform="translate(50, 50)" clip-path="url(#bodyClip)">
+                                <!-- Body SVG -->
+                                <g transform="scale(0.35)">
+                                    <circle cx="271.5" cy="109.5" r="109.5" fill="#A1A8B1"/>
+                                    <path d="M149 317C149 262.876 192.876 219 247 219H297C351.124 219 395 262.876 395 317V670H157C152.582 670 149 666.418 149 662V317Z" fill="#A1A8B1"/>
+                                    <path d="M149 645H243V1166C243 1191.96 221.957 1213 196 1213V1213C170.043 1213 149 1191.96 149 1166V645Z" fill="#A1A8B1"/>
+                                    <!-- Left arm (static) -->
+                                    <path d="M101.592 474.691C84.4256 494.162 54.7256 496.03 35.2549 478.864V478.864C15.7841 461.697 13.9159 431.997 31.0821 412.527L170.621 254.255C187.787 234.784 217.487 232.916 236.958 250.082V250.082C256.428 267.248 258.297 296.948 241.13 316.419L101.592 474.691Z" fill="#A1A8B1"/>
+                                    <path d="M32.3421 478.787C14.4801 459.952 15.2683 430.204 34.1026 412.342V412.342C52.937 394.48 82.6853 395.268 100.547 414.103L245.743 567.202C263.605 586.036 262.817 615.784 243.982 633.646V633.646C225.148 651.508 195.4 650.72 177.538 631.886L32.3421 478.787Z" fill="#A1A8B1"/>
+                                    <path d="M301 645H395V1166C395 1191.96 373.957 1213 348 1213V1213C322.043 1213 301 1191.96 301 1166V645Z" fill="#A1A8B1"/>
+                                </g>
+                                
+                                <!-- Right arm - single piece that rotates at shoulder -->
+                                <g id="vertical-arm">
+                                    <!-- Shoulder joint (pivot point) -->
+                                    <circle cx="138.25" cy="88.9" r="10" fill="#D9D9D9"/>
+                                    
+                                    <!-- Complete arm segment (rotates around shoulder) -->
+                                    <g id="v-arm-group" transform="translate(138.25, 88.9)">
+                                        <g id="v-arm-rotate" transform="rotate(0)">
+                                            <!-- Position arm so shoulder aligns with rotation center, elbow dot marks elbow position, and hand aligns with blue indicator -->
+                                            <g transform="translate(-17.85, -18.15) scale(0.3)">
+                                                <!-- Forearm (straight part) -->
+                                                <path d="M247 216C221.043 216 200 194.957 200 169V169C200 143.043 221.043 122 247 122L458 122C483.957 122 505 143.043 505 169V169C505 194.957 483.957 216 458 216L247 216Z" fill="#A1A8B1"/>
+                                                <!-- Upper arm (angled part) -->
+                                                <path d="M40.7032 104.906C18.2234 91.9277 10.5213 63.1829 23.5 40.7032V40.7032C36.4787 18.2234 65.2234 10.5213 87.7032 23.5L270.435 129C292.914 141.979 300.616 170.723 287.638 193.203V193.203C274.659 215.683 245.914 223.385 223.435 210.406L40.7032 104.906Z" fill="#A1A8B1"/>
+                                                <!-- Shoulder joint circle -->
+                                                <circle cx="59.5" cy="60.5" r="46.5" fill="#D9D9D9"/>
+                                                <!-- Elbow joint circle -->
+                                                <circle cx="246.5" cy="168.5" r="46.5" fill="#D9D9D9"/>
+                                                <!-- Hand indicator -->
+                                                <circle cx="458.5" cy="169.5" r="46.5" fill="#467CAC"/>
+                                                <!-- Hand indicator for dragging (positioned at end of arm, over the blue indicator) -->
+                                                <circle id="v-hand" cx="458.5" cy="169.5" r="10" fill="#0071e3" class="draggable-hand"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <!-- Labels -->
+                            <!-- Top Risk - vertically centered at y=70 (y=50, height=40) -->
+                            <g transform="translate(525, 70)">
+                                <text x="0" y="-8" text-anchor="start" class="zone-label" fill="rgb(244,67,54)">Ergonomic Risk</text>
+                                <text x="0" y="4" text-anchor="start" class="zone-measurement" fill="rgb(244,67,54)">+24 inches</text>
+                                <text x="0" y="16" text-anchor="start" class="zone-frequency" fill="rgba(244,67,54,0.8)">Reaches &lt;1x per minute</text>
+                            </g>
+                            <!-- Blue (+12 inches) - vertically centered at y=140 (y=90, height=100) -->
+                            <g transform="translate(525, 140)">
+                                <text x="0" y="-8" text-anchor="start" class="zone-measurement" fill="rgb(33,150,243)">+12 inches</text>
+                                <text x="0" y="4" text-anchor="start" class="zone-frequency" fill="rgba(33,150,243,0.8)">Reaches &gt;5x per minute</text>
+                            </g>
+                            <!-- Green (+6 inches) - vertically centered at y=215 (y=190, height=50) -->
+                            <g transform="translate(525, 215)">
+                                <text x="0" y="-8" text-anchor="start" class="zone-measurement" fill="rgb(76,175,80)">+6 inches</text>
+                                <text x="0" y="4" text-anchor="start" class="zone-frequency" fill="rgba(76,175,80,0.8)">Reaches &gt;5x per minute</text>
+                            </g>
+                            <!-- Purple (-3 inches) - vertically centered at y=265 (y=240, height=50) -->
+                            <g transform="translate(525, 265)">
+                                <text x="0" y="-8" text-anchor="start" class="zone-measurement" fill="rgb(156,39,176)">-3 inches</text>
+                                <text x="0" y="4" text-anchor="start" class="zone-frequency" fill="rgba(156,39,176,0.8)">Reaches &lt;1x per minute</text>
+                            </g>
+                            <!-- Bottom Risk - vertically centered at y=310 (y=290, height=40) -->
+                            <g transform="translate(525, 310)">
+                                <text x="0" y="0" text-anchor="start" class="zone-label" fill="rgb(244,67,54)">Ergonomic Risk</text>
+                            </g>
+                            <!-- Title -->
+                            <text x="350" y="550" text-anchor="middle" font-size="16" font-weight="600" fill="#f5f5f7">Vertical Reach Zones</text>
+                        </svg>
+                    </div>
+                </div>
+                <p class="interactive-note">Click buttons or drag the hand to reach each zone</p>
+            </section>
+                                    <!-- Key Insight -->
+             <div class="key-insight">
+                <h4>Design Principle for AR Interaction Zones</h4>
+                <p>
+                Legibility in AR requires careful attention to orientation, brightness, transparency, and color selection. Use billboarding to keep text facing users, with optimal tilt between -5° and +20°. Adapt display brightness to ambient conditions (500-10,000 nits depending on environment). Maintain opacity between 25-75% for balance between visibility and see-through capability. Prioritize blue for primary UI and warnings, use green and yellow for secondary elements, and avoid red and brown for critical information. These evidence-based guidelines ensure consistent character recognition across varying real-world conditions.
+                 </p>
+             </div>
+
+            <!-- Navigation Footer -->
+            <div class="nav-footer">
+                <a href="information-density.html" class="nav-button prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Information Density
+                </a>
+                <a href="types-of-input.html" class="nav-button next">
+                    Types of Input
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add glassmorphism effect to secondary header on scroll
+        const secondaryHeader = document.querySelector('.secondary-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                secondaryHeader.classList.add('scrolled');
+            } else {
+                secondaryHeader.classList.remove('scrolled');
+            }
+        });
+
+        // Interactive reach simulator
+        function setupReachSimulator() {
+            const buttons = document.querySelectorAll('.sim-button');
+            const arm = document.getElementById('reachArm');
+            const target = document.getElementById('reachTarget');
+
+            if (!arm || !target) return;
+
+            const zones = {
+                1: { distance: 100, angle: 30, color: '#4ecdc4' },
+                2: { distance: 160, angle: 50, color: '#ff6b6b' },
+                3: { distance: 220, angle: 75, color: '#ffc371' }
+            };
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const zone = button.dataset.zone;
+                    const config = zones[zone];
+
+                    // Update arm position
+                    arm.style.width = config.distance + 'px';
+                    arm.style.transform = `translate(-100%, -50%) rotate(${config.angle}deg)`;
+                    arm.style.background = `linear-gradient(90deg, ${config.color}, #ff6b6b)`;
+
+                    // Calculate target position
+                    const angleRad = (config.angle * Math.PI) / 180;
+                    const targetX = Math.cos(angleRad) * config.distance;
+                    const targetY = Math.sin(angleRad) * config.distance;
+
+                    target.style.left = `calc(50% + ${targetX}px)`;
+                    target.style.top = `calc(50% - ${targetY}px)`;
+                    target.style.borderColor = config.color;
+                    target.style.background = `${config.color}33`;
+
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.style.transform = 'scale(1)');
+                    // Add active state to clicked button
+                    button.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        button.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            });
+
+            // Initialize with Zone 1
+            if (buttons[0]) buttons[0].click();
+        }
+
+        // Add hover effect to reach zones
+        function setupZoneInteractions() {
+            const zones = document.querySelectorAll('.reach-zone');
+            
+            zones.forEach(zone => {
+                zone.addEventListener('mouseenter', () => {
+                    const currentTransform = zone.style.transform || 'translate(-50%, -50%)';
+                    zone.style.transform = currentTransform.includes('scale') 
+                        ? currentTransform.replace('scale(1)', 'scale(1.05)') 
+                        : currentTransform + ' scale(1.05)';
+                });
+
+                zone.addEventListener('mouseleave', () => {
+                    zone.style.transform = zone.style.transform.replace('scale(1.05)', 'scale(1)');
+                });
+            });
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            setupReachSimulator();
+            setupZoneInteractions();
+        });
+
+        // Add parallax effect to human figure on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const figure = document.querySelector('.human-figure');
+            if (!figure) return;
+
+            const moveX = (e.clientX - window.innerWidth / 2) / 50;
+            const moveY = (e.clientY - window.innerHeight / 2) / 50;
+            
+            figure.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+
+        // Vertical reach zones animation
+        function setupVerticalReachZones() {
+            const verticalButtons = document.querySelectorAll('[data-vertical-zone]');
+            const vArmGroup = document.getElementById('v-arm-group');
+            const vArmRotate = document.getElementById('v-arm-rotate');
+            const vHand = document.getElementById('v-hand');
+
+            if (!vArmGroup || !vArmRotate || !vHand) return;
+
+            // Arm properties
+            const shoulderX = 138.25;
+            const shoulderY = 88.9;
+            // Calculate arm length from SVG: distance from shoulder (59.5, 60.5) to hand (458.5, 169.5) after scale(0.3)
+            const armLength = Math.sqrt(Math.pow((458.5 - 59.5) * 0.3, 2) + Math.pow((169.5 - 60.5) * 0.3, 2));
+
+            // Vertical zone definitions (adjusted for cropped view, rectangle bottom at y=280)
+            // Blue zone (+12 inches) has been doubled in height from 50 to 100
+            const verticalZones = [
+                { name: 'risk-top', y: 70, range: [50, 90], button: 3 },
+                { name: 'blue', y: 140, range: [90, 190], button: 1 },      // Doubled height: y=90, height=100, center=140
+                { name: 'green', y: 215, range: [190, 240], button: 0 },   // Moved down: y=190, height=50, center=215
+                { name: 'purple', y: 265, range: [240, 290], button: 2 },   // Moved down: y=240, height=50, center=265
+                { name: 'risk-bottom', y: 310, range: [290, 330], button: 2 } // Moved down: y=290, height=40, center=310
+            ];
+
+            // Drag state
+            let isDraggingVertical = false;
+
+            // Vertical hand drag functionality
+            vHand.addEventListener('mousedown', function(e) {
+                isDraggingVertical = true;
+                document.body.classList.add('dragging');
+                vHand.setAttribute('r', '14');
+                vHand.style.opacity = '1';
+                e.preventDefault();
+            });
+
+            // Global mouse move handler
+            document.addEventListener('mousemove', function(e) {
+                if (isDraggingVertical) {
+                    const svg = vHand.closest('svg');
+                    const rect = svg.getBoundingClientRect();
+                    
+                    const x = ((e.clientX - rect.left) / rect.width) * 600;
+                    const y = ((e.clientY - rect.top) / rect.height) * 600;
+                    
+                    const targetY = Math.max(50, Math.min(280, y));
+                    const targetX = Math.max(100, Math.min(500, x));
+                    
+                    updateVerticalArmDirect(targetX, targetY);
+                    highlightVerticalZone(targetY);
+                }
+            });
+
+            // Global mouse up handler
+            document.addEventListener('mouseup', function() {
+                if (isDraggingVertical) {
+                    vHand.setAttribute('r', '10');
+                    vHand.style.opacity = '';
+                    isDraggingVertical = false;
+                    document.body.classList.remove('dragging');
+                }
+            });
+
+            // Function to highlight vertical zone based on Y position
+            function highlightVerticalZone(y) {
+                const zone = verticalZones.find(z => y >= z.range[0] && y < z.range[1]);
+                if (zone) {
+                    verticalButtons.forEach(btn => btn.classList.remove('active'));
+                    if (verticalButtons[zone.button]) {
+                        verticalButtons[zone.button].classList.add('active');
+                    }
+                }
+            }
+
+            // Function to update vertical arm position directly
+            function updateVerticalArmDirect(targetX, targetY) {
+                const dx = targetX - shoulderX;
+                const dy = targetY - shoulderY;
+                const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+                
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                let finalX = targetX;
+                let finalY = targetY;
+                if (distance > armLength) {
+                    finalX = shoulderX + Math.cos(angle * Math.PI / 180) * armLength;
+                    finalY = shoulderY + Math.sin(angle * Math.PI / 180) * armLength;
+                }
+                
+                vArmRotate.setAttribute('transform', `rotate(${angle})`);
+                
+                // Hand dot is now inside the transformed group, so it rotates with the arm
+                // Position is already set at (458.5, 169.5) in the original SVG coordinates
+            }
+
+            // Function to update vertical arm position with animation
+            function updateVerticalArm(targetY, animated = true) {
+                const targetX = 350;
+                const dx = targetX - shoulderX;
+                const dy = targetY - shoulderY;
+                const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+                
+                // Hand dot is now inside the transformed group, so it rotates with the arm
+                // Position is already set at (458.5, 169.5) in the original SVG coordinates
+                
+                if (animated) {
+                    animateRotation(vArmRotate, angle, 600);
+                } else {
+                    vArmRotate.setAttribute('transform', `rotate(${angle})`);
+                }
+            }
+
+            // Button click handlers
+            verticalButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    verticalButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    const targetY = parseInt(this.dataset.y);
+                    updateVerticalArm(targetY, true);
+                    
+                    vHand.style.transition = 'r 0.3s ease';
+                    vHand.setAttribute('r', '14');
+                    setTimeout(() => {
+                        vHand.setAttribute('r', '10');
+                    }, 300);
+                });
+            });
+
+            // Helper function to animate SVG attributes
+            function animateElement(element, attribute, targetValue, duration) {
+                const startValue = parseFloat(element.getAttribute(attribute));
+                const startTime = performance.now();
+                
+                function animate(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeProgress = 1 - Math.pow(1 - progress, 3);
+                    const currentValue = startValue + (targetValue - startValue) * easeProgress;
+                    element.setAttribute(attribute, currentValue);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                }
+                
+                requestAnimationFrame(animate);
+            }
+
+            // Helper function to animate rotation
+            function animateRotation(element, targetAngle, duration) {
+                const currentTransform = element.getAttribute('transform');
+                const match = currentTransform.match(/rotate\(([0-9.-]+)/);
+                const startAngle = match ? parseFloat(match[1]) : 0;
+                const startTime = performance.now();
+                
+                function animate(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeProgress = 1 - Math.pow(1 - progress, 3);
+                    const currentAngle = startAngle + (targetAngle - startAngle) * easeProgress;
+                    element.setAttribute('transform', `rotate(${currentAngle})`);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                }
+                
+                requestAnimationFrame(animate);
+            }
+
+            // Initialize first button as active
+            if (verticalButtons.length > 0) {
+                setTimeout(() => {
+                    verticalButtons[0].click();
+                }, 500);
+            }
+        }
+
+        // Initialize vertical reach zones
+        document.addEventListener('DOMContentLoaded', () => {
+            setupVerticalReachZones();
+        });
+    </script>
+</body>
+</html>

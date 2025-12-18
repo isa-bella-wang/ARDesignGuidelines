@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readability - AR Design Guidelines</title>
+    <link rel="stylesheet" href="apple-styles.css">
+</head>
+<body>
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <div class="secondary-header-content">
+            <a href="index.html" class="secondary-header-logo">AR Guidelines</a>
+            <nav class="secondary-nav">
+                <a href="index.html" class="secondary-nav-link active">Design</a>
+                <a href="#" class="secondary-nav-link">Develop</a>
+                <a href="#" class="secondary-nav-link">Book</a>
+                <a href="#" class="secondary-nav-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-container">
+                <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 5H18M2 10H18M2 15H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" class="filter-input" placeholder="Filter">
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">AR DESIGN GUIDELINES</div>
+                <a href="introduction.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Introduction
+                </a>
+                <a href="getting-started.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Getting Started
+                </a>
+                <div class="sidebar-section-title">FOUNDATIONS</div>
+                <a href="depth-distance-conflict.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Depth, Distance and Conflict
+                </a>
+                <a href="visual-field-placement.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Visual Field Placement
+                </a>
+                <a href="frames-of-reference.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Frames of Reference
+                </a>
+                <a href="readability.html" class="sidebar-nav-item active">
+                    <span class="chevron">></span>
+                    Readability
+                </a>
+                <a href="legibility.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Legibility
+                </a>
+                <a href="information-density.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Information Density
+                </a>
+                <a href="interaction-zones.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Interaction Zones
+                </a>
+                <a href="types-of-input.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Types of Input
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="chapter-label">CHAPTER 4</div>
+            <h1 class="page-title">Readability</h1>
+            <p class="page-intro">Ensuring text comprehension in augmented reality through proper sizing, contrast, and spatial layout in dynamic, variable lighting conditions.</p>
+
+            <!-- Ensure Readability -->
+            <div class="content-section">
+                <div class="section-label">Concepts</div>
+                <h2 class="section-heading">Ensure Readability</h2>
+                <p class="section-text">
+                    Readability refers to "the ease with which the meaning of text can be comprehended." It is directly related to the cognitive aspects of the reading process, including the user's ability to understand multi-word content, track sentences, and maintain context during continuous reading. Readability depends on factors such as text size, line length, spatial layout, and the amount of text presented at once.
+                </p>
+
+                <div class="key-insight key-insight-red">
+                    <h4>Why Readability is Hard in AR</h4>
+                    <p>
+                        Rather than being presented on a fixed, uniformly lit surface, AR text exists within the complexity of the real world. Its perception is dependent on the environment surrounding it—ambient lighting, motion, background textures, depth cues, and continuous user movement.
+                    </p>
+                    <p style="margin-top: 25px;">
+                        <strong>This makes readability and legibility particularly complex challenges that require careful consideration of visual angles, contrast, and text presentation strategies.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Measuring in AR -->
+            <div class="content-section">
+                <div class="section-label">Impact</div>
+                <h2 class="section-heading">Measuring in AR</h2>
+                <p class="section-text">
+                    In AR, size depends on how large something is perceived, as well as how large it actually is. This is because an object's perceived size is a factor of distance. The closer an object is, the bigger it appears; the farther away, the smaller. Therefore, measurements are not in pixels or points—they are calculated in <strong>visual angle</strong>, which is how much an object takes over space on the retina.
+                </p>
+
+                <div class="visual-comparison">
+                    <h3>Visual Angle & Distance</h3>
+                    
+                    <div class="angle-demo">
+                        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 800px;">
+                            <!-- Eye -->
+                            <ellipse cx="100" cy="200" rx="35" ry="25" fill="#4A90E2" opacity="0.3"/>
+                            <circle cx="105" cy="200" r="15" fill="#ffffff"/>
+                            <circle cx="108" cy="197" r="5" fill="#ffffff">
+                                <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            
+                            <!-- Visual angle lines with animation -->
+                            <line x1="105" y1="200" x2="600" y2="120" stroke="#FF6B6B" stroke-width="3" stroke-dasharray="5,5">
+                                <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="105" y1="200" x2="600" y2="280" stroke="#FF6B6B" stroke-width="3" stroke-dasharray="5,5">
+                                <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                            </line>
+                            
+                            <!-- Distance line with pulse -->
+                            <line x1="105" y1="200" x2="600" y2="200" stroke="#51CF66" stroke-width="3">
+                                <animate attributeName="stroke-width" values="3;4;3" dur="1.5s" repeatCount="indefinite"/>
+                            </line>
+                            <text x="350" y="190" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="700" fill="#51CF66">Distance (d)</text>
+                            
+                            <!-- Object with float animation -->
+                            <g class="float-animation">
+                                <rect x="580" y="120" width="40" height="160" fill="#9775FA" opacity="0.7" rx="8"/>
+                                <line x1="600" y1="120" x2="600" y2="280" stroke="#9775FA" stroke-width="4"/>
+                            </g>
+                            
+                            <!-- Height indicator -->
+                            <line x1="630" y1="120" x2="630" y2="280" stroke="#9775FA" stroke-width="2"/>
+                            <line x1="625" y1="120" x2="635" y2="120" stroke="#9775FA" stroke-width="2"/>
+                            <line x1="625" y1="280" x2="635" y2="280" stroke="#9775FA" stroke-width="2"/>
+                            <text x="660" y="205" font-family="system-ui" font-size="16" font-weight="700" fill="#9775FA">Height (h)</text>
+                            
+                            <!-- Visual angle arc with animation -->
+                            <path d="M 150 190 Q 200 150 220 170" fill="none" stroke="#FF6B6B" stroke-width="2">
+                                <animate attributeName="d" 
+                                         values="M 150 190 Q 200 150 220 170;M 150 190 Q 200 140 220 170;M 150 190 Q 200 150 220 170" 
+                                         dur="2s" repeatCount="indefinite"/>
+                            </path>
+                            <text x="180" y="160" font-family="system-ui" font-size="16" font-weight="700" fill="#FF6B6B">Visual Angle</text>
+                            
+                            <!-- Animated particles showing perception -->
+                            <circle cx="105" cy="200" r="3" fill="#FFD93D">
+                                <animate attributeName="cx" values="105;600;105" dur="3s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            
+                            <!-- Labels -->
+                            <text x="400" y="380" text-anchor="middle" font-family="system-ui" font-size="18" fill="#ffffff">The farther the distance, the larger the object must be to maintain the same visual angle</text>
+                        </svg>
+                    </div>
+                        </div>
+                    </div>
+
+
+            <div class="comparison-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="frame-card">
+                    <h3>Calculating Size</h3>
+                    <p>
+                        Convert the Height formula using dmm.
+                    </p>
+                    <div style="background: rgba(250, 239, 201, 0.2); border-radius: 18px; padding: 36px 40px; margin-top: 30px; display: flex; justify-content: center; align-items: center;">
+                        <span style="font-family: 'SF Mono', 'Monaco', monospace; font-size: 1.625rem; font-weight: 600; font-style: italic; color: #ffffff;">
+                            <em>Height</em>(mm) = <em>dmm</em> × <em>distance</em>(m)
+                        </span>
+                    </div>
+                        </div>
+                        
+                <div class="frame-card">
+                    <h3>dmm</h3>
+                    <p>
+                        1 dmm = an object that appears 1 mm tall at 1 m viewing distance
+                    </p>
+                    <div style="background: rgba(250, 239, 201, 0.2); border-radius: 18px; padding: 36px 40px; margin-top: 30px; display: flex; justify-content: center; align-items: center;">
+                        <span style="font-family: 'SF Mono', 'Monaco', monospace; font-size: 1.625rem; font-weight: 600; font-style: italic; color: #ffffff;">
+                            <em>dmm</em> =
+                            <span style="display: inline-flex; flex-direction: column; align-items: center; margin-left: 6px;">
+                                <span style="font-size: 1.375rem; line-height: 1.2;"><em>height</em>(mm)</span>
+                                <span style="width: 100%; height: 1px; background: #ffffff; margin: 4px 0;"></span>
+                                <span style="font-size: 1.375rem; line-height: 1.2;"><em>distance</em>(m)</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Sizing Guidelines -->
+            <div class="content-section">
+                <div class="section-label">Recommendations</div>
+                <h2 class="section-heading">Text Sizing Guidelines</h2>
+                <p class="section-text">
+                    In order to calculate appropriate character height in AR, it must be specified using visual angle, not physical units, because perceptual size depends on distance. This approach aligns with Microsoft HoloLens typography recommendations and findings across AR/VR readability studies. Users consistently selected angular sizes that scale with the amount of text rather than with device type or resolution.
+                </p>
+
+                <div class="recommendation-grid">
+                    <div class="rec-card">
+                        <h3>
+                            <span class="rec-icon">1</span>
+                            Title Text
+                        </h3>
+                        <p>
+                            Recommended for titles and/or short one-line text. The preferred angular size is significantly larger than body text, reflecting title-level emphasis and rapid single-glance reading.
+                        </p>
+                        
+                        <div class="size-range">27–32 dmm</div>
+                        
+                        <div class="distance-comparison">
+                            <div class="distance-item">
+                                <div class="label">@ 1.0 meter</div>
+                                <div class="value">27-32 mm</div>
+                            </div>
+                            <div class="distance-item">
+                                <div class="label">@ 1.5 meters</div>
+                                <div class="value">40.5-48 mm</div>
+                            </div>
+                            <div class="distance-item">
+                                <div class="label">@ 2.0 meters</div>
+                                <div class="value">54-64 mm</div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Text Size Calculator -->
+                        <section class="text-size-tool" style="margin-top: 40px; padding: 32px; border-radius: 18px; background: rgba(74, 144, 226, 0.1); border: 1px solid rgba(74, 144, 226, 0.2);">
+                            <h2 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #4A90E2;">
+                                Text size vs. distance
+                            </h2>
+                            <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.6; color: #b0b0b0;">
+                                Move the slider to change viewing distance. The required physical text height and on-screen size update to keep the same apparent size (constant dmm).
+                            </p>
+
+                            <!-- Controls row -->
+                            <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-end; margin-bottom: 18px;">
+                                <div style="flex: 1 1 220px;">
+                                    <label for="titleDistanceSlider" style="display: block; font-size: 13px; margin-bottom: 4px; color: #b0b0b0;">
+                                        Viewing distance (meters)
+                                    </label>
+                                    <input
+                                        id="titleDistanceSlider"
+                                        type="range"
+                                        min="0.3"
+                                        max="1"
+                                        step="0.1"
+                                        value="0.4"
+                                        style="width: 100%; accent-color: #4A90E2;"
+                                    >
+                                    <div style="font-size: 13px; margin-top: 4px; color: #b0b0b0;">
+                                        <span>Distance: </span>
+                                        <span id="titleDistanceValue">0.4</span> m
+                            </div>
+                        </div>
+                        
+                                <div style="flex: 0 0 180px;">
+                                    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #8a8a8a; margin-bottom: 4px;">
+                                        Assumption
+                            </div>
+                                    <div style="font-size: 13px; line-height: 1.5; color: #b0b0b0;">
+                                        Using <strong style="color: #4A90E2;">29.5 dmm</strong> (appears 29.5 mm tall at 1 m).
+            </div>
+                            </div>
+                            
+                                <div style="flex: 0 0 180px;">
+                                    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #8a8a8a; margin-bottom: 4px;">
+                                        Required text height
+                                </div>
+                                    <div style="font-size: 18px; font-weight: 600; color: #4A90E2;">
+                                        <span id="titleHeightValue">29.5</span> mm
+                        </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Sample text display -->
+                            <div style="border-radius: 14px; background: #2a2a2a; border: 1px solid rgba(74, 144, 226, 0.3); padding: 18px 20px;">
+                                <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #8a8a8a; margin-bottom: 6px;">
+                                    Sample text at required size
+                                </div>
+                                <div
+                                    id="titleSampleText"
+                                    style="font-family: 'Poppins', sans-serif; line-height: 1.2; color: #ffffff; font-weight: 600;"
+                                >
+                                    Aa
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="size-card">
+                        <h4>Body Text</h4>
+                        <p>
+                            Recommended for body and medium-sized amounts of text. Users preferred this size, closely matching values suggested for comfortable reading of paragraphs in VR environments.
+                        </p>
+                        
+                        <div class="size-range">16–17 dmm</div>
+                        
+                        <div class="distance-comparison">
+                            <div class="distance-item">
+                                <div class="label">@ 1.0 meter</div>
+                                <div class="value">16-17 mm</div>
+                            </div>
+                            <div class="distance-item">
+                                <div class="label">@ 1.5 meters</div>
+                                <div class="value">24-25.5 mm</div>
+                            </div>
+                            <div class="distance-item">
+                                <div class="label">@ 2.0 meters</div>
+                                <div class="value">32-34 mm</div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Text Size Calculator -->
+                        <section class="text-size-tool" style="margin-top: 40px; padding: 32px; border-radius: 18px; background: rgba(74, 144, 226, 0.1); border: 1px solid rgba(74, 144, 226, 0.2);">
+                            <h2 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; color: #4A90E2;">
+                                Text size vs. distance
+                            </h2>
+                            <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.6; color: #b0b0b0;">
+                                Move the slider to change viewing distance. The required physical text height and on-screen size update to keep the same apparent size (constant dmm).
+                            </p>
+
+                            <!-- Controls row -->
+                            <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-end; margin-bottom: 18px;">
+                                <div style="flex: 1 1 220px;">
+                                    <label for="bodyDistanceSlider" style="display: block; font-size: 13px; margin-bottom: 4px; color: #b0b0b0;">
+                                        Viewing distance (meters)
+                                    </label>
+                                    <input
+                                        id="bodyDistanceSlider"
+                                        type="range"
+                                        min="0.3"
+                                        max="1"
+                                        step="0.1"
+                                        value="0.4"
+                                        style="width: 100%; accent-color: #4A90E2;"
+                                    >
+                                    <div style="font-size: 13px; margin-top: 4px; color: #b0b0b0;">
+                                        <span>Distance: </span>
+                                        <span id="bodyDistanceValue">0.4</span> m
+                    </div>
+                </div>
+
+                                <div style="flex: 0 0 180px;">
+                                    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #8a8a8a; margin-bottom: 4px;">
+                                        Assumption
+                </div>
+                                    <div style="font-size: 13px; line-height: 1.5; color: #b0b0b0;">
+                                        Using <strong style="color: #4A90E2;">16.5 dmm</strong> (appears 16.5 mm tall at 1 m).
+                            </div>
+                        </div>
+                        
+                                <div style="flex: 0 0 180px;">
+                                    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #8a8a8a; margin-bottom: 4px;">
+                                        Required text height
+                        </div>
+                                    <div style="font-size: 18px; font-weight: 600; color: #4A90E2;">
+                                        <span id="bodyHeightValue">16.5</span> mm
+                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sample text display -->
+                            <div style="border-radius: 14px; background: #2a2a2a; border: 1px solid rgba(74, 144, 226, 0.3); padding: 18px 20px;">
+                                <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #8a8a8a; margin-bottom: 6px;">
+                                    Sample text at required size
+                            </div>
+                                <div
+                                    id="bodySampleText"
+                                    style="font-family: 'Poppins', sans-serif; line-height: 1.2; color: #ffffff; font-weight: 400;"
+                                >
+                                    Aa
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Insight -->
+            <div class="key-insight">
+                <h4>Design Principle for AR Readability</h4>
+                <p>
+                    Readability in AR requires a fundamentally different approach than traditional screen-based design. Use visual angle measurements (dmm) to ensure text scales appropriately with distance. Keep title text at 27-32 dmm and body text at 16-17 dmm. Chunk text into 2-3 line segments maximum to reduce cognitive load. Prioritize high contrast above all other enhancements. By following these evidence-based guidelines, you can create AR text that remains comfortable to read across varying distances, lighting conditions, and user movement patterns.
+                </p>
+            </div>
+
+            <!-- Navigation Footer -->
+            <div class="nav-footer">
+                <a href="frames-of-reference.html" class="nav-button prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Frames of Reference
+                </a>
+                <a href="legibility.html" class="nav-button next">
+                    Legibility
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add glassmorphism effect to secondary header on scroll
+        const secondaryHeader = document.querySelector('.secondary-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                secondaryHeader.classList.add('scrolled');
+            } else {
+                secondaryHeader.classList.remove('scrolled');
+            }
+        });
+
+        // Size Calculator
+        const textTypeSelect = document.getElementById('textType');
+        const distanceInput = document.getElementById('distance');
+        const customDmmInput = document.getElementById('customDmm');
+        const resultValue = document.getElementById('resultValue');
+        const resultFormula = document.getElementById('resultFormula');
+
+        function calculateSize() {
+            if (!textTypeSelect || !distanceInput || !resultValue || !resultFormula) return;
+            
+            const dmm = customDmmInput.value || textTypeSelect.value;
+            const distance = parseFloat(distanceInput.value);
+            const size = (dmm * distance).toFixed(1);
+            
+            resultValue.textContent = `${size} mm`;
+            resultFormula.textContent = `${dmm} dmm × ${distance.toFixed(1)}m = ${size}mm`;
+        }
+
+        if (textTypeSelect && distanceInput) {
+            textTypeSelect.addEventListener('change', () => {
+                customDmmInput.value = '';
+                calculateSize();
+            });
+            
+            distanceInput.addEventListener('input', calculateSize);
+            
+            if (customDmmInput) {
+                customDmmInput.addEventListener('input', () => {
+                    if (customDmmInput.value) {
+                        calculateSize();
+                    }
+                });
+            }
+            
+            // Initial calculation
+            calculateSize();
+        }
+
+        // Title Text Size Calculator
+        (function () {
+            const titleDmm = 29.5; // average of 27-32 dmm for title text
+            const titleDistanceSlider = document.getElementById('titleDistanceSlider');
+            const titleDistanceValue = document.getElementById('titleDistanceValue');
+            const titleHeightValue = document.getElementById('titleHeightValue');
+            const titleSampleText = document.getElementById('titleSampleText');
+
+            if (titleDistanceSlider && titleDistanceValue && titleHeightValue && titleSampleText) {
+                function updateTitleTextSize() {
+                    const distanceM = parseFloat(titleDistanceSlider.value);
+                    const heightMm = titleDmm * distanceM; // Height(mm) = dmm × distance(m)
+
+                    // Display numeric values
+                    titleDistanceValue.textContent = distanceM.toFixed(1);
+                    titleHeightValue.textContent = heightMm.toFixed(1);
+
+                    // Map physical height to on-screen font size (simple visual mapping)
+                    // Using a multiplier to make the scaling more visible
+                    const fontPx = heightMm * 10; // multiplier for visual representation
+                    titleSampleText.style.fontSize = fontPx + 'px';
+                }
+
+                titleDistanceSlider.addEventListener('input', updateTitleTextSize);
+                updateTitleTextSize();
+            }
+        })();
+
+        // Body Text Size Calculator
+        (function () {
+            const bodyDmm = 16.5; // average of 16-17 dmm for body text
+            const bodyDistanceSlider = document.getElementById('bodyDistanceSlider');
+            const bodyDistanceValue = document.getElementById('bodyDistanceValue');
+            const bodyHeightValue = document.getElementById('bodyHeightValue');
+            const bodySampleText = document.getElementById('bodySampleText');
+
+            if (bodyDistanceSlider && bodyDistanceValue && bodyHeightValue && bodySampleText) {
+                function updateBodyTextSize() {
+                    const distanceM = parseFloat(bodyDistanceSlider.value);
+                    const heightMm = bodyDmm * distanceM; // Height(mm) = dmm × distance(m)
+
+                    // Display numeric values
+                    bodyDistanceValue.textContent = distanceM.toFixed(1);
+                    bodyHeightValue.textContent = heightMm.toFixed(1);
+
+                    // Map physical height to on-screen font size (simple visual mapping)
+                    // Using a multiplier to make the scaling more visible
+                    const fontPx = heightMm * 10; // multiplier for visual representation
+                    bodySampleText.style.fontSize = fontPx + 'px';
+                }
+
+                bodyDistanceSlider.addEventListener('input', updateBodyTextSize);
+                updateBodyTextSize();
+            }
+        })();
+
+        // Reveal on scroll animation
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Animate efficiency bars on scroll
+        const observerForBars = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.bar-fill');
+                    bars.forEach(bar => {
+                        bar.style.animation = 'fillBar 2s ease-out forwards';
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const efficiencyMeter = document.querySelector('.efficiency-meter');
+        if (efficiencyMeter) {
+            observerForBars.observe(efficiencyMeter);
+        }
+
+        // Contrast demo interactions
+        document.querySelectorAll('.contrast-demo').forEach(demo => {
+            demo.addEventListener('click', function() {
+                this.style.transform = 'scale(1.1) rotate(2deg)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                }, 300);
+            });
+        });
+
+        // Distance simulator hover effects
+        document.querySelectorAll('.distance-simulator').forEach(sim => {
+            sim.addEventListener('mouseenter', function() {
+                const text = this.querySelector('.sim-text');
+                if (text) {
+                    text.style.transform = 'scale(1.05)';
+                    text.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.2)';
+                }
+            });
+            
+            sim.addEventListener('mouseleave', function() {
+                const text = this.querySelector('.sim-text');
+                if (text) {
+                    text.style.transform = 'scale(1)';
+                    text.style.boxShadow = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

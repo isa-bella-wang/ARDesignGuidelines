@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depth, Distance and Conflict - AR Design Guidelines</title>
+    <link rel="stylesheet" href="apple-styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <div class="secondary-header-content">
+            <a href="index.html" class="secondary-header-logo">AR Guidelines</a>
+            <nav class="secondary-nav">
+                <a href="index.html" class="secondary-nav-link active">Design</a>
+                <a href="#" class="secondary-nav-link">Develop</a>
+                <a href="#" class="secondary-nav-link">Book</a>
+                <a href="#" class="secondary-nav-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-container">
+                <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 5H18M2 10H18M2 15H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" class="filter-input" placeholder="Filter">
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">AR DESIGN GUIDELINES</div>
+                <a href="introduction.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Introduction
+                </a>
+                <a href="getting-started.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Getting Started
+                </a>
+                <div class="sidebar-section-title">FOUNDATIONS</div>
+                <a href="depth-distance-conflict.html" class="sidebar-nav-item active">
+                    <span class="chevron">></span>
+                    Depth, Distance and Conflict
+                </a>
+                <a href="visual-field-placement.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Visual Field Placement
+                </a>
+                <a href="frames-of-reference.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Frames of Reference
+                </a>
+                <a href="readability.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Readability
+                </a>
+                <a href="legibility.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Legibility
+                </a>
+                <a href="information-density.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Information Density
+                </a>
+                <a href="interaction-zones.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Interaction Zones
+                </a>
+                <a href="types-of-input.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Types of Input
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-background"></div>
+                
+                <div class="chapter-number">CHAPTER 01</div>
+                <h1 class="page-title">Depth, Distance<br>& Conflict</h1>
+                <p class="page-intro">Understanding how the human visual system perceives depth in reality versus augmented reality, and the physiological challenges that arise from the vergence-accommodation conflict.</p>
+                
+                <div class="scroll-indicator">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M19 12l-7 7-7-7"/>
+                    </svg>
+                    <span style="font-size: 12px; font-family: 'SF Mono', 'Monaco', monospace;">Scroll to explore</span>
+                </div>
+            </div>
+
+            <!-- How Depth Perception Works -->
+            <div class="content-section">
+                <div class="section-label">Foundation</div>
+                <h2 class="section-heading">How Depth Perception Works</h2>
+                <p class="section-text">
+                    Understanding depth perception goes to the core of all ergonomic and physiological decisions in AR. The Human Visual System uses accommodation (changing lens shape to focus at different distances) and vergence (rotating eyes to align on a single object) to perceive depth. In real life, these two abilities are in perfect alignment.
+                </p>
+
+                <div class="comparison-container">
+                    <div class="comparison-card no-conflict">
+                        <div class="card-header">
+                            
+                            <h3 class="card-title">No Conflict - Real Life</h3>
+                        </div>
+                        <p>
+                            When looking at an object in the real world, light rays bounce off surfaces and enter through the cornea. Our eyes constantly adjust focus and alignment to perceive depth accurately.
+                        </p>
+                        <p>
+                            <strong>Accommodation and vergence work in perfect harmony</strong>, focusing and converging on the same point in space. This natural alignment allows comfortable viewing for extended periods.
+                        </p>
+                        
+                        <div class="diagram-container">
+                            <div class="svg-container">
+                                <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="eyeGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:0.3" />
+                                            <stop offset="100%" style="stop-color:#0288D1;stop-opacity:0.6" />
+                                        </linearGradient>
+                                        
+                                        <linearGradient id="convergenceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#00E676;stop-opacity:0.8" />
+                                            <stop offset="50%" style="stop-color:#00E676;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#00E676;stop-opacity:0.8" />
+                                        </linearGradient>
+                                    </defs>
+
+                                    <!-- Title -->
+                                    <text x="250" y="30" text-anchor="middle" fill="#00E676" font-size="18" font-weight="600">
+                                        Natural Vision
+                                    </text>
+
+                                    <!-- Left Eye -->
+                                    <g class="animated-object">
+                                        <circle cx="150" cy="80" r="35" fill="url(#eyeGrad1)" stroke="#0288D1" stroke-width="2"/>
+                                        <circle cx="150" cy="80" r="18" fill="#0288D1" opacity="0.8"/>
+                                        <circle cx="146" cy="76" r="7" fill="#4FC3F7"/>
+                                    </g>
+
+                                    <!-- Right Eye -->
+                                    <g class="animated-object">
+                                        <circle cx="350" cy="80" r="35" fill="url(#eyeGrad1)" stroke="#0288D1" stroke-width="2"/>
+                                        <circle cx="350" cy="80" r="18" fill="#0288D1" opacity="0.8"/>
+                                        <circle cx="346" cy="76" r="7" fill="#4FC3F7"/>
+                                    </g>
+                                
+                                    <!-- Convergence/Focal lines (both same - GREEN) -->
+                                    <line class="animated-line" x1="150" y1="115" x2="250" y2="400" 
+                                          stroke="url(#convergenceGrad)" stroke-width="4" opacity="0.9"/>
+                                    <line class="animated-line" x1="350" y1="115" x2="250" y2="400" 
+                                          stroke="url(#convergenceGrad)" stroke-width="4" opacity="0.9"/>
+
+                                    <!-- Target Object -->
+                                    <g class="animated-object">
+                                        <polygon points="250,380 270,400 250,420 230,400" fill="#00E676" opacity="0.9">
+                                            <animateTransform attributeName="transform" type="scale" 
+                                                values="1;1.1;1" dur="2s" repeatCount="indefinite"
+                                                additive="sum" />
+                                        </polygon>
+                                        <circle cx="250" cy="400" r="6" fill="#4FC3F7">
+                                            <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                                    </g>
+                                
+                                    <!-- Distance Label -->
+                                    <g>
+                                        <line x1="80" y1="115" x2="80" y2="400" stroke="#00E676" stroke-width="2" stroke-dasharray="5,5"/>
+                                        <text x="50" y="270" fill="#00E676" font-size="14" font-weight="600" transform="rotate(-90 50 270)">
+                                            Same Distance
+                                        </text>
+                                    </g>
+
+                                    <!-- Info Text -->
+                                    <text x="250" y="460" text-anchor="middle" fill="#a1a1a6" font-size="14">
+                                        Vergence = Focal Distance
+                                    </text>
+                                    <text x="250" y="480" text-anchor="middle" fill="#00E676" font-size="16" font-weight="600">
+                                        ✓ Natural & Comfortable
+                                    </text>
+                            </svg>
+                        </div>
+                        </div>
+                        <p class="description">
+                            In real life, your eyes converge and focus at the same distance. Both vergence (where your eyes point) and accommodation (where they focus) work together naturally, creating a comfortable viewing experience with no strain.
+                        </p>
+                    </div>
+
+                    <div class="comparison-card conflict">
+                        <div class="card-header">
+                            <h3 class="card-title">Conflict Present - AR Display</h3>
+                        </div>
+                        <p>
+                            In AR, a virtual object can be rendered at any depth, but your eyes must still focus on the physical screen of the headset. This creates a fundamental mismatch.
+                        </p>
+                        <p>
+                            <strong>The Vergence-Accommodation Conflict (VAC)</strong> occurs when your eyes point to one distance (vergence) but focus at another (accommodation). The greater the mismatch, the greater the strain.
+                        </p>
+                        
+                        <div class="diagram-container">
+                            <div class="svg-container">
+                                <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="eyeGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:0.3" />
+                                            <stop offset="100%" style="stop-color:#0288D1;stop-opacity:0.6" />
+                                        </linearGradient>
+                                        
+                                        <linearGradient id="vergenceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:0.6" />
+                                            <stop offset="50%" style="stop-color:#4FC3F7;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#4FC3F7;stop-opacity:0.6" />
+                                        </linearGradient>
+
+                                        <linearGradient id="focalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.6" />
+                                            <stop offset="50%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:0.6" />
+                                        </linearGradient>
+
+                                        <linearGradient id="screenGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#0071e3;stop-opacity:0.5" />
+                                            <stop offset="100%" style="stop-color:#0071e3;stop-opacity:0.8" />
+                                        </linearGradient>
+                                    </defs>
+
+                                    <!-- Title -->
+                                    <text x="250" y="30" text-anchor="middle" fill="#ff6b6b" font-size="18" font-weight="600">
+                                        AR Display Vision
+                                    </text>
+
+                                    <!-- Left Eye -->
+                                    <g class="animated-object">
+                                        <circle cx="150" cy="80" r="35" fill="url(#eyeGrad2)" stroke="#0288D1" stroke-width="2"/>
+                                        <circle cx="150" cy="80" r="18" fill="#0288D1" opacity="0.8"/>
+                                        <circle cx="146" cy="76" r="7" fill="#4FC3F7"/>
+                                    </g>
+                                
+                                    <!-- Right Eye -->
+                                    <g class="animated-object">
+                                        <circle cx="350" cy="80" r="35" fill="url(#eyeGrad2)" stroke="#0288D1" stroke-width="2"/>
+                                        <circle cx="350" cy="80" r="18" fill="#0288D1" opacity="0.8"/>
+                                        <circle cx="346" cy="76" r="7" fill="#4FC3F7"/>
+                                    </g>
+                                
+                                    <!-- Vergence lines (to virtual object - BLUE dashed) -->
+                                    <line class="animated-line" x1="150" y1="115" x2="250" y2="400" 
+                                          stroke="url(#vergenceGrad)" stroke-width="3" stroke-dasharray="8,4" opacity="0.8"/>
+                                    <line class="animated-line" x1="350" y1="115" x2="250" y2="400" 
+                                          stroke="url(#vergenceGrad)" stroke-width="3" stroke-dasharray="8,4" opacity="0.8"/>
+                                
+                                    <!-- Focal lines (to display - RED solid) -->
+                                    <line class="animated-line" x1="150" y1="115" x2="250" y2="240" 
+                                          stroke="url(#focalGrad)" stroke-width="4" opacity="0.9" 
+                                          style="animation-delay: 0.5s"/>
+                                    <line class="animated-line" x1="350" y1="115" x2="250" y2="240" 
+                                          stroke="url(#focalGrad)" stroke-width="4" opacity="0.9"
+                                          style="animation-delay: 0.5s"/>
+                                
+                                    <!-- AR Display Surface -->
+                                    <g class="animated-object" style="animation-delay: 0.3s">
+                                        <rect x="100" y="232" width="300" height="16" fill="url(#screenGrad2)" 
+                                              stroke="#0071e3" stroke-width="2" rx="2" opacity="0.9">
+                                            <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+                                </rect>
+                                        <text x="410" y="245" fill="#0071e3" font-size="12" font-weight="600">Display</text>
+                                    </g>
+
+                                    <!-- Virtual Object (behind display) -->
+                                    <g class="animated-object" style="animation-delay: 0.6s">
+                                        <polygon points="250,380 270,400 250,420 230,400" fill="#4FC3F7" opacity="0.7">
+                                            <animateTransform attributeName="transform" type="scale" 
+                                                values="1;1.1;1" dur="2s" repeatCount="indefinite"
+                                                additive="sum" />
+                                        </polygon>
+                                        <circle cx="250" cy="400" r="6" fill="#4FC3F7" opacity="0.8">
+                                            <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+                                    </circle>
+                                        <text x="290" y="405" fill="#4FC3F7" font-size="12">Virtual Object</text>
+                                    </g>
+
+                                    <!-- Distance Labels -->
+                                    <g>
+                                        <!-- Focal Distance -->
+                                        <line x1="420" y1="115" x2="420" y2="240" stroke="#ff6b6b" stroke-width="2"/>
+                                        <text x="440" y="185" fill="#ff6b6b" font-size="12" font-weight="600" transform="rotate(-90 440 185)">
+                                            Focal
+                                        </text>
+                                        
+                                        <!-- Vergence Distance -->
+                                        <line x1="80" y1="115" x2="80" y2="400" stroke="#4FC3F7" stroke-width="2" stroke-dasharray="5,5"/>
+                                        <text x="50" y="270" fill="#4FC3F7" font-size="12" font-weight="600" transform="rotate(-90 50 270)">
+                                            Vergence
+                                        </text>
+                                    </g>
+
+                                    <!-- Conflict Indicator -->
+                                    <g>
+                                        <line x1="430" y1="240" x2="430" y2="400" stroke="#ff6b6b" stroke-width="3" opacity="0.5">
+                                            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+                                        </line>
+                                        <text x="445" y="325" fill="#ff6b6b" font-size="14" font-weight="700" transform="rotate(-90 445 325)">
+                                            CONFLICT
+                                        </text>
+                                </g>
+
+                                    <!-- Info Text -->
+                                    <text x="250" y="460" text-anchor="middle" fill="#a1a1a6" font-size="14">
+                                        Vergence ≠ Focal Distance
+                                    </text>
+                                    <text x="250" y="480" text-anchor="middle" fill="#ff6b6b" font-size="16" font-weight="600">
+                                        ⚠ Eye Strain & Fatigue
+                                    </text>
+                            </svg>
+                        </div>
+                        </div>
+                        <p class="description">
+                            In AR, your eyes converge at the virtual object depth (blue dashed lines) but focus at the physical display surface (red solid lines). This mismatch between vergence and accommodation creates the conflict, leading to eye strain, discomfort, and fatigue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conflict Alert -->
+            <div class="key-insight key-insight-red">
+                <h4>The Vergence-Accommodation Conflict</h4>
+                <p>
+                    The VAC directly dictates where objects should be placed in AR. This conflict is not just a technical limitation—it's a <strong>physiological challenge</strong> that can cause eye strain, discomfort, and fatigue. The human visual system, not the display technology, is the bottleneck.
+                </p>
+                <p style="margin-top: 25px;">
+                    The greater the distance between the accommodation point and the vergence point, the greater the conflict, the greater the strain on the user. This is why understanding depth placement is the foundation of comfortable AR design.
+                </p>
+            </div>
+
+                        <!-- Interactive VAC Visualization -->
+                        <div class="content-section vac-section">
+                            <h2 class="section-heading vac-section-heading">Vergence-Accommodation Conflict</h2>
+                            <p class="section-text vac-section-text">
+                                Explore how AR displays create a mismatch between where your eyes converge and where they focus, unlike real-world vision.
+                            </p>
+            
+                            <!-- Main container with horizontal layout -->
+                            <div class="vac-main-container">
+            
+                                <!-- Horizontal layout wrapper -->
+                                <div class="vac-horizontal-wrapper"> 
+            
+                                    <!-- Left side: Preview with Sliders -->
+                                    <div class="vac-viz-container">
+                                        <div class="vac-mode-selector">
+                                            <button class="vac-mode-button active" data-mode="reallife">
+                                                Real Life
+                                            </button>
+                                            <button class="vac-mode-button" data-mode="ar">
+                                                AR Display
+                                            </button>
+                                        </div>
+                                    <div class="vac-svg-wrapper">
+                                        <svg id="main-svg" width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" class="vac-svg">
+                                        <defs>
+                                            <!-- Gradients -->
+                                            <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:0.3" />
+                                                <stop offset="100%" style="stop-color:#0288D1;stop-opacity:0.6" />
+                                            </linearGradient>
+                                            
+                                            <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#0071e3;stop-opacity:0.4" />
+                                                <stop offset="100%" style="stop-color:#0071e3;stop-opacity:0.7" />
+                                            </linearGradient>
+            
+                                            <!-- Arrow marker -->
+                                            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                                <polygon points="0 0, 10 3, 0 6" fill="#4FC3F7" />
+                                            </marker>
+                                        </defs>
+            
+                                        <!-- Left Eye -->
+                                        <g id="left-eye">
+                                            <circle cx="250" cy="100" r="40" fill="url(#eyeGrad)" stroke="#0288D1" stroke-width="2"/>
+                                            <circle cx="250" cy="100" r="20" fill="#0288D1" opacity="0.8"/>
+                                            <circle cx="245" cy="95" r="8" fill="#4FC3F7"/>
+                                        </g>
+            
+                                        <!-- Right Eye -->
+                                        <g id="right-eye">
+                                            <circle cx="550" cy="100" r="40" fill="url(#eyeGrad)" stroke="#0288D1" stroke-width="2"/>
+                                            <circle cx="550" cy="100" r="20" fill="#0288D1" opacity="0.8"/>
+                                            <circle cx="545" cy="95" r="8" fill="#4FC3F7"/>
+                                        </g>
+            
+                                        <!-- Vergence lines (to object) -->
+                                        <line id="left-vergence" x1="250" y1="140" x2="400" y2="360" stroke="#4FC3F7" stroke-width="2" stroke-dasharray="5,5" opacity="0.8"/>
+                                        <line id="right-vergence" x1="550" y1="140" x2="400" y2="360" stroke="#4FC3F7" stroke-width="2" stroke-dasharray="5,5" opacity="0.8"/>
+            
+                                        <!-- Focal distance lines (dashed when different) -->
+                                        <line id="left-focal" x1="250" y1="140" x2="400" y2="360" stroke="#00E676" stroke-width="3" opacity="0"/>
+                                        <line id="right-focal" x1="550" y1="140" x2="400" y2="360" stroke="#00E676" stroke-width="3" opacity="0"/>
+            
+                                        <!-- AR Display Screen (hidden by default) -->
+                                        <g id="ar-screen" opacity="0">
+                                            <rect x="150" y="250" width="500" height="15" fill="url(#screenGrad)" stroke="#0071e3" stroke-width="2" rx="2"/>
+                                            <text x="670" y="263" fill="#0071e3" font-size="1em" font-weight="600">Display Surface</text>
+                                        </g>
+            
+                                        <!-- Target Object -->
+                                        <g id="target-object">
+                                            <polygon points="400,0 420,20 400,40 380,20" fill="#0071e3" opacity="0.9"/>
+                                            <circle cx="400" cy="20" r="6" fill="#4FC3F7"/>
+                                        </g>
+            
+                                        <!-- Distance Labels -->
+                                        <!-- Vergence Distance -->
+                                        <g id="vergence-label">
+                                            <line x1="100" y1="140" x2="100" y2="360" stroke="#4FC3F7" stroke-width="2"/>
+                                            <line x1="95" y1="140" x2="105" y2="140" stroke="#4FC3F7" stroke-width="2"/>
+                                            <line x1="95" y1="360" x2="105" y2="360" stroke="#4FC3F7" stroke-width="2"/>
+                                            <text x="70" y="260" fill="#4FC3F7" font-size="1em" font-weight="600" transform="rotate(-90 70 260)">
+                                                Vergence Distance
+                                            </text>
+                                        </g>
+            
+                                        <!-- Focal Distance Label (for AR mode) -->
+                                        <g id="focal-label" opacity="0">
+                                            <line x1="700" y1="140" x2="700" y2="257" stroke="#00E676" stroke-width="2"/>
+                                            <line x1="695" y1="140" x2="705" y2="140" stroke="#00E676" stroke-width="2"/>
+                                            <line x1="695" y1="257" x2="705" y2="257" stroke="#00E676" stroke-width="2"/>
+                                            <text x="720" y="210" fill="#00E676" font-size="1em" font-weight="600" transform="rotate(-90 720 210)">
+                                                Focal Distance
+                                            </text>
+                                        </g>
+                                    </svg>
+                                    </div>
+                                    
+                                    <!-- Controls (Sliders) -->
+                                    <div class="vac-controls" id="controls">
+                                        <!-- Object Distance Control -->
+                                        <div class="vac-control-group">
+                                            <div class="vac-control-label">
+                                                <span>Object Distance</span>
+                                                <span class="vac-control-value" id="object-distance-value">2.0m</span>
+                                            </div>
+                                            <input type="range" class="vac-slider" id="object-distance" min="100" max="360" value="220" step="10">
+                                        </div>
+            
+                                        <!-- Display Distance Control (AR only) -->
+                                        <div class="vac-control-group vac-display-control" id="display-control">
+                                            <div class="vac-control-label">
+                                                <span>Display Distance</span>
+                                                <span class="vac-control-value" id="display-distance-value">0.5m</span>
+                                            </div>
+                                            <input type="range" class="vac-slider" id="display-distance" min="110" max="250" value="150" step="10">
+                                        </div>
+                                    </div>
+                                    </div>
+            
+                                    <!-- Right side: Measurements -->
+                                    <div class="vac-info-panel">
+                                    <!-- Measurements vertically stacked -->
+                                    <h2 class="vac-info-title">Measurements</h2>
+                                    <div class="vac-info-grid">
+                                        <div class="vac-info-item">
+                                            <div class="vac-info-item-label">Vergence Distance</div>
+                                            <div class="vac-info-item-value" id="info-vergence">2.0m</div>
+                                        </div>
+                                        <div class="vac-info-item">
+                                            <div class="vac-info-item-label">Focal Distance</div>
+                                            <div class="vac-info-item-value" id="info-focal">2.0m</div>
+                                        </div>
+                                        <div class="vac-info-item">
+                                            <div class="vac-info-item-label">Conflict</div>
+                                            <div class="vac-info-item-value" id="info-conflict">None</div>
+                                        </div>
+                                    </div>
+                                    <div class="vac-conflict-warning" id="conflict-warning">
+                                        ⚠️ <strong>Vergence-Accommodation Conflict Detected:</strong> Your eyes are converging at one distance but focusing at another. This mismatch can cause eye strain, fatigue, and discomfort during extended AR use.
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+            <!-- Interactive Depth Explorer -->
+            <div class="content-section depth-slider-section">
+                <h3>Interactive Depth Explorer</h3>
+                <p style="text-align: center; color: rgba(255, 255, 255, 0.75); font-size: 17px; margin-bottom: 50px;">
+                    Drag the slider to see how object placement affects comfort. Assumes a 2m focal plane.
+                </p>
+                
+                <div class="slider-container">
+                    <div class="depth-slider" id="depthSlider">
+                        <div class="slider-handle" id="sliderHandle"></div>
+                    </div>
+                    
+                    <div class="depth-labels">
+                        <div class="depth-label">
+                            <div style="font-size: 18px; color: #ff3b30; margin-bottom: 5px;">0.5m</div>
+                            <div>Too Close</div>
+                        </div>
+                        <div class="depth-label">
+                            <div style="font-size: 18px; color: #F59E0B; margin-bottom: 5px;">1.25m</div>
+                            <div>Near Limit</div>
+                        </div>
+                        <div class="depth-label">
+                            <div style="font-size: 18px; color: #00D9FF; margin-bottom: 5px;">2.0m</div>
+                            <div>Focal Plane</div>
+                        </div>
+                        <div class="depth-label">
+                            <div style="font-size: 18px; color: #F59E0B; margin-bottom: 5px;">5.0m</div>
+                            <div>Far Limit</div>
+                        </div>
+                        <div class="depth-label">
+                            <div style="font-size: 18px; color: #8B5CF6; margin-bottom: 5px;">10m</div>
+                            <div>Too Far</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="depth-visualization">
+                    <div class="visual-output">
+                        <div class="output-distance" id="outputDistance">2.0m</div>
+                        <div class="output-diopter" id="outputDiopter">0.50 diopters</div>
+                        <div class="comfort-indicator optimal" id="comfortIndicator">
+                            <span id="comfortText">✓ OPTIMAL COMFORT ZONE</span>
+                        </div>
+                    </div>
+                    
+                    <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; margin-top: 50px;">
+                        <!-- Person -->
+                        <g transform="translate(50, 100)">
+                            <circle cx="0" cy="-40" r="25" fill="#00D9FF" opacity="0.3"/>
+                            <rect x="-15" y="-15" width="30" height="60" fill="#00D9FF" opacity="0.3" rx="8"/>
+                            <rect x="-20" y="-35" width="40" height="15" fill="#00D9FF" rx="5"/>
+                        </g>
+                        
+                        <!-- Distance line -->
+                        <line x1="80" y1="100" x2="700" y2="100" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2" stroke-dasharray="10,5"/>
+                        
+                        <!-- Object -->
+                        <g id="movingObject" transform="translate(500, 100)">
+                            <rect x="-40" y="-40" width="80" height="80" fill="#00D9FF" opacity="0.8" rx="16"/>
+                            <circle cx="0" cy="0" r="20" fill="#00D9FF"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Diopter Calculator -->
+            <div class="diopter-calculator">
+                <div class="calculator-header">
+                    <h3>Diopter Calculator</h3>
+                    <p style="opacity: 0.9; font-size: 17px;">Calculate comfortable viewing ranges for any focal plane</p>
+                </div>
+                
+                <div class="calculator-grid">
+                    <div class="calc-input">
+                        <label>FOCAL PLANE (m)</label>
+                        <input type="number" id="focalPlane" value="2.0" min="0.5" max="5" step="0.1"/>
+                    </div>
+                    
+                    <div class="calc-input">
+                        <label>NEAR LIMIT (m)</label>
+                        <input type="text" id="nearLimit" value="1.25" readonly style="background: rgba(255,255,255,0.9);"/>
+                    </div>
+                    
+                    <div class="calc-input">
+                        <label>FAR LIMIT (m)</label>
+                        <input type="text" id="farLimit" value="5.0" readonly style="background: rgba(255,255,255,0.9);"/>
+                    </div>
+                </div>
+                
+                <div class="calc-result">
+                    <div class="calc-result-label">COMFORTABLE VIEWING RANGE</div>
+                    <div class="calc-result-value" id="calcRange">1.25m - 5.0m</div>
+                    <div class="calc-result-label" style="margin-top: 10px; font-size: 15px;">Based on ±0.3 diopter rule</div>
+                </div>
+            </div>
+
+            <!-- Optimal Depth Placement -->
+            <div class="range-diagram">
+                <h3>Optimal Depth Placement</h3>
+                <p style="text-align: center; color: rgba(255, 255, 255, 0.75); font-size: 17px; margin-bottom: 40px;">
+                    For a 2m focal plane, objects should be placed within this comfortable range
+                </p>
+                
+                <div class="range-visual">
+                    <div class="range-line"></div>
+                    
+                    <div class="range-zone zone-too-close"></div>
+                    <div class="range-zone zone-comfort"></div>
+                    <div class="range-zone zone-too-far"></div>
+                    
+                    <div class="zone-marker" style="left: 16%;">
+                        <div class="zone-label">
+                            <div class="zone-label-title" style="color: #ff3b30;">Too Close</div>
+                            <div class="zone-label-subtitle">< 1.25m</div>
+                        </div>
+                        0.5m
+                    </div>
+                    
+                    <div class="zone-marker" style="left: 28%;">
+                        <div class="zone-label">
+                            <div class="zone-label-title" style="color: #F59E0B;">Near Limit</div>
+                            <div class="zone-label-subtitle">Boundary</div>
+                        </div>
+                        1.25m
+                    </div>
+                    
+                    <div class="zone-marker focal" style="left: 50%;">
+                        <div class="zone-label" style="top: -90px;">
+                            <div class="zone-label-title" style="color: #00D9FF; font-size: 18px;">Focal Plane</div>
+                            <div class="zone-label-subtitle">Zero Conflict</div>
+                        </div>
+                        2.0m
+                    </div>
+                    
+                    <div class="zone-marker" style="left: 72%;">
+                        <div class="zone-label">
+                            <div class="zone-label-title" style="color: #F59E0B;">Far Limit</div>
+                            <div class="zone-label-subtitle">Boundary</div>
+                        </div>
+                        5.0m
+                    </div>
+                    
+                    <div class="zone-marker" style="left: 84%;">
+                        <div class="zone-label">
+                            <div class="zone-label-title" style="color: #8B5CF6;">Too Far</div>
+                            <div class="zone-label-subtitle">> 5.0m</div>
+                        </div>
+                        10m
+                    </div>
+                </div>
+                
+                <div style="margin-top: 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                    <div style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div style="font-size: 36px; font-weight: 800; color: #ff3b30; margin-bottom: 10px;">< 1.25m</div>
+                        <div style="font-size: 16px; color: rgba(255, 255, 255, 0.75);">Increasing Eye Strain</div>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: linear-gradient(135deg, #2ECC71, #10B981); border-radius: 20px; color: white;">
+                        <div style="font-size: 36px; font-weight: 800; margin-bottom: 10px;">1.25m - 5.0m</div>
+                        <div style="font-size: 16px; opacity: 0.9;">Optimal Comfort Zone</div>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div style="font-size: 36px; font-weight: 800; color: #8B5CF6; margin-bottom: 10px;">> 5.0m</div>
+                        <div style="font-size: 16px; color: rgba(255, 255, 255, 0.75);">Becomes Blurry</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Insight -->
+            <div class="key-insight">
+                <h4>Design Principle for AR Depth, Distance, and Conflict</h4>
+                <p>
+                    The ±0.3 diopter rule provides a scientifically-validated framework for comfortable AR design. Always calculate your specific device's comfort zone based on its focal plane. For a 2m focal plane, place critical content between 1.25m and 5.0m. Position the most important elements as close to the focal plane as possible to minimize eye strain and maximize user comfort. This approach aligns with Microsoft HoloLens guidelines and empirical research on the human visual system's depth of field.
+                </p>
+            </div>
+
+            <!-- Navigation Footer -->
+            <div class="nav-footer">
+                <a href="getting-started.html" class="nav-button prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Getting Started
+                </a>
+                <a href="visual-field-placement.html" class="nav-button next">
+                    Visual Field Placement
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add glassmorphism effect to secondary header on scroll
+        const secondaryHeader = document.querySelector('.secondary-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                secondaryHeader.classList.add('scrolled');
+            } else {
+                secondaryHeader.classList.remove('scrolled');
+            }
+        });
+
+        // Interactive hover effects for comparison cards
+        document.querySelectorAll('.comparison-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const svg = this.querySelector('svg');
+                if (svg) {
+                    svg.style.transform = 'scale(1.05)';
+                    svg.style.transition = 'transform 0.5s ease';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                const svg = this.querySelector('svg');
+                if (svg) {
+                    svg.style.transform = 'scale(1)';
+                }
+            });
+        });
+
+        // Depth Slider Interaction
+        const slider = document.getElementById('depthSlider');
+        const handle = document.getElementById('sliderHandle');
+        const outputDistance = document.getElementById('outputDistance');
+        const outputDiopter = document.getElementById('outputDiopter');
+        const comfortIndicator = document.getElementById('comfortIndicator');
+        const comfortText = document.getElementById('comfortText');
+        const movingObject = document.getElementById('movingObject');
+
+        if (slider && handle) {
+            let isDragging = false;
+            let currentPosition = 50; // Start at focal plane (50%)
+
+            function updateSlider(percentage) {
+                currentPosition = Math.max(0, Math.min(100, percentage));
+                handle.style.left = currentPosition + '%';
+                
+                // Calculate distance (0.5m to 10m)
+                const distance = 0.5 + (currentPosition / 100) * 9.5;
+                const diopter = 1 / distance;
+                
+                if (outputDistance) outputDistance.textContent = distance.toFixed(2) + 'm';
+                if (outputDiopter) outputDiopter.textContent = diopter.toFixed(2) + ' diopters';
+                
+                // Update comfort indicator
+                if (comfortIndicator && comfortText) {
+                    if (distance < 1.25) {
+                        comfortIndicator.className = 'comfort-indicator danger';
+                        comfortText.innerHTML = '⚠ TOO CLOSE - Eye Strain';
+                    } else if (distance >= 1.25 && distance <= 5.0) {
+                        comfortIndicator.className = 'comfort-indicator optimal';
+                        comfortText.innerHTML = '✓ OPTIMAL COMFORT ZONE';
+                    } else {
+                        comfortIndicator.className = 'comfort-indicator warning';
+                        comfortText.innerHTML = '⚠ TOO FAR - Becomes Blurry';
+                    }
+                }
+                
+                // Move object visualization
+                if (movingObject) {
+                    const objectX = 80 + (currentPosition / 100) * 620;
+                    movingObject.setAttribute('transform', `translate(${objectX}, 100)`);
+                    
+                    // Color based on comfort
+                    const objectRect = movingObject.querySelector('rect');
+                    const objectCircle = movingObject.querySelector('circle');
+                    if (objectRect && objectCircle) {
+                        if (distance < 1.25) {
+                            objectRect.setAttribute('fill', '#ff3b30');
+                            objectCircle.setAttribute('fill', '#ff3b30');
+                        } else if (distance >= 1.25 && distance <= 5.0) {
+                            objectRect.setAttribute('fill', '#2ECC71');
+                            objectCircle.setAttribute('fill', '#2ECC71');
+                        } else {
+                            objectRect.setAttribute('fill', '#8B5CF6');
+                            objectCircle.setAttribute('fill', '#8B5CF6');
+                        }
+                    }
+                }
+            }
+
+            handle.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    const rect = slider.getBoundingClientRect();
+                    const percentage = ((e.clientX - rect.left) / rect.width) * 100;
+                    updateSlider(percentage);
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            slider.addEventListener('click', (e) => {
+                const rect = slider.getBoundingClientRect();
+                const percentage = ((e.clientX - rect.left) / rect.width) * 100;
+                updateSlider(percentage);
+            });
+
+            // Touch support
+            handle.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (isDragging) {
+                    const rect = slider.getBoundingClientRect();
+                    const touch = e.touches[0];
+                    const percentage = ((touch.clientX - rect.left) / rect.width) * 100;
+                    updateSlider(percentage);
+                }
+            });
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            // Initialize slider at focal plane
+            updateSlider(50);
+        }
+
+        // Diopter Calculator
+        const focalPlaneInput = document.getElementById('focalPlane');
+        const nearLimitInput = document.getElementById('nearLimit');
+        const farLimitInput = document.getElementById('farLimit');
+        const calcRange = document.getElementById('calcRange');
+
+        if (focalPlaneInput) {
+            function calculateLimits() {
+                const focalPlane = parseFloat(focalPlaneInput.value);
+                const focalDiopter = 1 / focalPlane;
+                
+                const nearDiopter = focalDiopter + 0.3;
+                const farDiopter = Math.max(0.01, focalDiopter - 0.3);
+                
+                const nearLimit = 1 / nearDiopter;
+                const farLimit = 1 / farDiopter;
+                
+                if (nearLimitInput) nearLimitInput.value = nearLimit.toFixed(2);
+                if (farLimitInput) farLimitInput.value = farLimit.toFixed(1);
+                if (calcRange) calcRange.textContent = `${nearLimit.toFixed(2)}m - ${farLimit.toFixed(1)}m`;
+            }
+
+            focalPlaneInput.addEventListener('input', calculateLimits);
+            calculateLimits();
+        }
+
+        // Scroll animations
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+
+        // Vergence-Accommodation Conflict Interactive Visualization
+        let currentMode = 'reallife';
+        let objectDistance = 220;
+        let displayDistance = 150;
+
+        // Elements
+        const modeButtons = document.querySelectorAll('.vac-mode-button');
+        const objectSlider = document.getElementById('object-distance');
+        const displaySlider = document.getElementById('display-distance');
+        const displayControl = document.getElementById('display-control');
+        
+        // SVG Elements
+        const leftVergence = document.getElementById('left-vergence');
+        const rightVergence = document.getElementById('right-vergence');
+        const leftFocal = document.getElementById('left-focal');
+        const rightFocal = document.getElementById('right-focal');
+        const arScreen = document.getElementById('ar-screen');
+        const targetObject = document.getElementById('target-object');
+        const focalLabel = document.getElementById('focal-label');
+        const conflictWarning = document.getElementById('conflict-warning');
+
+        // Info displays
+        const objectDistanceValue = document.getElementById('object-distance-value');
+        const displayDistanceValue = document.getElementById('display-distance-value');
+        const infoVergence = document.getElementById('info-vergence');
+        const infoFocal = document.getElementById('info-focal');
+        const infoConflict = document.getElementById('info-conflict');
+
+        // Mode switching
+        if (modeButtons.length > 0) {
+            modeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modeButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    currentMode = button.dataset.mode;
+                    updateVisualization();
+                });
+            });
+        }
+
+        // Slider controls
+        if (objectSlider) {
+            objectSlider.addEventListener('input', (e) => {
+                objectDistance = parseInt(e.target.value);
+                updateVisualization();
+            });
+        }
+
+        if (displaySlider) {
+            displaySlider.addEventListener('input', (e) => {
+                displayDistance = parseInt(e.target.value);
+                updateVisualization();
+            });
+        }
+
+        // Style sliders - add dynamic background gradient
+        const styleSliders = () => {
+            const sliders = document.querySelectorAll('.vac-slider');
+            sliders.forEach(slider => {
+                // Add event listeners for dynamic background gradient
+                slider.addEventListener('input', function() {
+                    const value = (this.value - this.min) / (this.max - this.min) * 100;
+                    this.style.background = `linear-gradient(to right, #0071e3 0%, #0071e3 ${value}%, rgba(255, 255, 255, 0.1) ${value}%, rgba(255, 255, 255, 0.1) 100%)`;
+                });
+                slider.dispatchEvent(new Event('input'));
+            });
+        };
+
+        function pixelsToMeters(pixels) {
+            // Scale: 100 pixels ≈ 0.5m
+            return ((pixels - 140) / 180 * 2).toFixed(1);
+        }
+
+        function updateVisualization() {
+            if (!targetObject || !leftVergence || !rightVergence) return;
+
+            const objectY = 140 + objectDistance;
+            const displayY = 140 + displayDistance;
+
+            // Update object position
+            const targetX = 400;
+            targetObject.setAttribute('transform', `translate(0, ${objectDistance + 140})`);
+            
+            // The actual center of the diamond after transform
+            const diamondCenterY = objectDistance + 140 + 20;
+
+            // Update vergence lines (always point to diamond center)
+            leftVergence.setAttribute('x2', targetX);
+            leftVergence.setAttribute('y2', diamondCenterY);
+            rightVergence.setAttribute('x2', targetX);
+            rightVergence.setAttribute('y2', diamondCenterY);
+
+            // Update vergence label to match object position
+            const vergenceLabel = document.getElementById('vergence-label');
+            if (vergenceLabel) {
+                const vergenceLine = vergenceLabel.querySelector('line');
+                if (vergenceLine) {
+                    vergenceLine.setAttribute('y2', diamondCenterY);
+                }
+                const vergenceTicks = vergenceLabel.querySelectorAll('line');
+                if (vergenceTicks.length > 2) {
+                    vergenceTicks[2].setAttribute('y1', diamondCenterY);
+                    vergenceTicks[2].setAttribute('y2', diamondCenterY);
+                }
+            }
+
+            if (currentMode === 'reallife') {
+                // Real Life Mode
+                if (displayControl) displayControl.classList.remove('show');
+                if (arScreen) arScreen.setAttribute('opacity', '0');
+                if (focalLabel) focalLabel.setAttribute('opacity', '0');
+                
+                // Focal lines match vergence (no conflict)
+                if (leftFocal) leftFocal.setAttribute('opacity', '0');
+                if (rightFocal) rightFocal.setAttribute('opacity', '0');
+
+                // Update info
+                const distance = pixelsToMeters(objectDistance);
+                if (objectDistanceValue) objectDistanceValue.textContent = distance + 'm';
+                if (infoVergence) infoVergence.textContent = distance + 'm';
+                if (infoFocal) infoFocal.textContent = distance + 'm';
+                if (infoConflict) {
+                    infoConflict.textContent = 'None';
+                    infoConflict.style.color = '#00E676';
+                }
+                if (conflictWarning) conflictWarning.classList.remove('show');
+
+            } else {
+                // AR Mode
+                if (displayControl) displayControl.classList.add('show');
+                if (arScreen) arScreen.setAttribute('opacity', '1');
+                if (focalLabel) focalLabel.setAttribute('opacity', '1');
+
+                // Display surface is positioned based on displayDistance slider
+                // The focal convergence point is where the eyes focus (at the display surface)
+                const focalConvergenceY = displayY; // 140 + displayDistance
+                
+                // Position AR screen so its center aligns with the focal convergence point
+                // The rect has height 15, so center it at focalConvergenceY
+                if (arScreen) {
+                    const rect = arScreen.querySelector('rect');
+                    if (rect) {
+                        // Position rect so its center (y + 7.5) is at focalConvergenceY
+                        rect.setAttribute('y', focalConvergenceY - 7.5);
+                    }
+                    // Update text position to align with rect
+                    const text = arScreen.querySelector('text');
+                    if (text) {
+                        text.setAttribute('y', focalConvergenceY + 5);
+                    }
+                }
+
+                // Focal lines converge at the display surface
+                if (leftFocal && rightFocal) {
+                    leftFocal.setAttribute('opacity', '0.8');
+                    rightFocal.setAttribute('opacity', '0.8');
+                    leftFocal.setAttribute('x2', targetX);
+                    leftFocal.setAttribute('y2', focalConvergenceY);
+                    rightFocal.setAttribute('x2', targetX);
+                    rightFocal.setAttribute('y2', focalConvergenceY);
+                }
+
+                // Update focal label to point to the display surface
+                if (focalLabel) {
+                    const focalLine = focalLabel.querySelector('line');
+                    if (focalLine) {
+                        focalLine.setAttribute('y2', focalConvergenceY);
+                    }
+                    const focalLineTicks = focalLabel.querySelectorAll('line');
+                    if (focalLineTicks.length > 2) {
+                        focalLineTicks[2].setAttribute('y1', focalConvergenceY);
+                        focalLineTicks[2].setAttribute('y2', focalConvergenceY);
+                    }
+                }
+
+                // Update info
+                const objDistance = pixelsToMeters(objectDistance);
+                const dispDistance = pixelsToMeters(displayDistance);
+                const conflictAmount = Math.abs(parseFloat(objDistance) - parseFloat(dispDistance));
+
+                if (objectDistanceValue) objectDistanceValue.textContent = objDistance + 'm';
+                if (displayDistanceValue) displayDistanceValue.textContent = dispDistance + 'm';
+                if (infoVergence) infoVergence.textContent = objDistance + 'm';
+                if (infoFocal) infoFocal.textContent = dispDistance + 'm';
+                
+                if (infoConflict) {
+                    if (conflictAmount > 0.1) {
+                        infoConflict.textContent = conflictAmount.toFixed(1) + 'm';
+                        infoConflict.style.color = '#ff6b6b';
+                        if (conflictWarning) conflictWarning.classList.add('show');
+                    } else {
+                        infoConflict.textContent = 'None';
+                        infoConflict.style.color = '#00E676';
+                        if (conflictWarning) conflictWarning.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        // Initialize
+        if (modeButtons.length > 0) {
+            styleSliders();
+            updateVisualization();
+        }
+
+    </script>
+</body>
+</html>

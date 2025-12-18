@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legibility - AR Design Guidelines</title>
+    <link rel="stylesheet" href="apple-styles.css">
+</head>
+<body>
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <div class="secondary-header-content">
+            <a href="index.html" class="secondary-header-logo">AR Guidelines</a>
+            <nav class="secondary-nav">
+                <a href="index.html" class="secondary-nav-link active">Design</a>
+                <a href="#" class="secondary-nav-link">Develop</a>
+                <a href="#" class="secondary-nav-link">Book</a>
+                <a href="#" class="secondary-nav-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-container">
+                <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 5H18M2 10H18M2 15H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" class="filter-input" placeholder="Filter">
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">AR DESIGN GUIDELINES</div>
+                <a href="introduction.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Introduction
+                </a>
+                <a href="getting-started.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Getting Started
+                </a>
+                <div class="sidebar-section-title">FOUNDATIONS</div>
+                <a href="depth-distance-conflict.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Depth, Distance and Conflict
+                </a>
+                <a href="visual-field-placement.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Visual Field Placement
+                </a>
+                <a href="frames-of-reference.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Frames of Reference
+                </a>
+                <a href="readability.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Readability
+                </a>
+                <a href="legibility.html" class="sidebar-nav-item active">
+                    <span class="chevron">></span>
+                    Legibility
+                </a>
+                <a href="information-density.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Information Density
+                </a>
+                <a href="interaction-zones.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Interaction Zones
+                </a>
+                <a href="types-of-input.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Types of Input
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="chapter-number">CHAPTER 05</div>
+                <h1 class="page-title">Legibility</h1>
+                <p class="page-intro">Ensuring characters and symbols are easy to recognize through optimal contrast, opacity, background interference, and display characteristics in augmented reality.</p>
+            </div>
+
+            <!-- Ensure Legibility -->
+            <div class="content-section">
+                <div class="section-label">Foundation</div>
+                <h2 class="section-heading">Ensure Legibility</h2>
+                <p class="section-text">
+                    Legibility refers to "the degree to which text is easy to read." It concerns the perceptual recognition of characters, and is primarily influenced by technical and typographic presentation—such as contrast, opacity, background interference, and the optical characteristics of the display. Not to be confused with readability, legibility focuses on character-level recognition rather than content comprehension.
+                </p>
+            </div>
+
+            <!-- Billboard Demo -->
+            <div class="billboard-demo">
+                <h3 style="font-size: 38px; text-align: center; margin-bottom: 20px; color: #ffffff;">Billboarding & Orientation</h3>
+                <p style="text-align: center; color: rgba(255, 255, 255, 0.75); margin-bottom: 40px; font-size: 16px;">
+                    Text panels should continuously face the user. Adjust the angle to see the effect.
+                </p>
+                
+                <div class="billboard-demo-wrapper">
+                    <div class="demo-controls">
+                        <button class="control-button active">0° Perpendicular</button>
+                        <button class="control-button">+10° Optimal</button>
+                        <button class="control-button">+20° Maximum</button>
+                        <button class="control-button">+45° Too Much</button>
+                    </div>
+                    
+                    <div class="billboard-stage">
+                        <div class="billboard-panel" id="billboardPanel">
+                            AR Text Panel
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px; padding: 25px; background: rgba(255, 255, 255, 0.05); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.9);">
+                        <strong>Optimal Range:</strong> -5° to +20° tilt from user's line of sight<br>
+                        <strong>Maximum:</strong> Should not exceed 45° to maintain legibility
+                    </p>
+                </div>
+            </div>
+
+            <!-- Brightness Section -->
+            <div class="brightness-section">
+                <h3>Brightness & Ambient Light</h3>
+                <p style="text-align: center; opacity: 0.9; font-size: 17px; margin-bottom: 20px;">
+                    Display brightness must adapt to ambient conditions to maintain legibility
+                </p>
+                
+                <div class="lighting-scenarios">
+                    <div class="scenario-card">
+                        <div class="scenario-icon">🏠</div>
+                        <div class="scenario-title">Indoor</div>
+                        <div class="scenario-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Ambient</span>
+                                <span class="stat-value">30-150 lux</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">AR Needed</span>
+                                <span class="stat-value">500-1000 nits</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-card">
+                        <div class="scenario-icon">☁️</div>
+                        <div class="scenario-title">Outdoor Overcast</div>
+                        <div class="scenario-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Ambient</span>
+                                <span class="stat-value">~300 lux</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">AR Needed</span>
+                                <span class="stat-value">1000-5000 nits</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-card">
+                        <div class="scenario-icon">☀️</div>
+                        <div class="scenario-title">Outdoor Daylight</div>
+                        <div class="scenario-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Ambient</span>
+                                <span class="stat-value">~3000 lux</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">AR Needed</span>
+                                <span class="stat-value">5000-10000 nits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-chart" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h4>Brightness Requirements by Environment</h4>
+                    
+                    <div class="chart-bars">
+                        <div class="chart-row">
+                            <div class="chart-label">
+                                <span class="label-text" style="color: rgba(255, 255, 255, 0.9);">Indoor</span>
+                                <span class="label-value" style="color: #F59E0B;">500-1000 nits</span>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-fill" style="width: 10%; background: linear-gradient(90deg, #2ECC71, #34D399);"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-row">
+                            <div class="chart-label">
+                                <span class="label-text" style="color: rgba(255, 255, 255, 0.9);">Outdoor Overcast</span>
+                                <span class="label-value" style="color: #F59E0B;">1000-5000 nits</span>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-fill" style="width: 50%; background: linear-gradient(90deg, #F59E0B, #FBBF24);"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-row">
+                            <div class="chart-label">
+                                <span class="label-text" style="color: rgba(255, 255, 255, 0.9);">Outdoor Daylight</span>
+                                <span class="label-value" style="color: #F59E0B;">5000-10000 nits</span>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-fill" style="width: 100%; background: linear-gradient(90deg, #ff3b30, #F87171);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transparency Demo -->
+            <div class="transparency-demo">
+                <h3>Transparency & Opacity</h3>
+                <p style="text-align: center; color: rgba(255, 255, 255, 0.75); font-size: 16px; margin-bottom: 20px;">
+                    Adjust the slider to find the optimal opacity range. <br>
+                    25% to 75% opacity ensures both content usability and sufficient see-through capability.
+                </p>
+                
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        <div class="opacity-slider" id="opacitySlider">
+                            <div class="slider-handle" id="opacityHandle"></div>
+                        </div>
+                        <div class="slider-labels">
+                            <span>0% (Invisible)</span>
+                            <span style="color: #2ECC71; font-weight: 700;">25% Minimum</span>
+                            <span style="color: #3B82F6; font-weight: 700;">50% Balanced</span>
+                            <span style="color: #2ECC71; font-weight: 700;">75% Maximum</span>
+                            <span>100% (Opaque)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-box">
+                        <div class="preview-overlay" id="previewOverlay">
+                            AR Content
+                        </div>
+                    </div>
+                    
+                    <div class="opacity-value" id="opacityValue">50%</div>
+                </div>
+                
+                <div style="margin-top: 40px; padding: 30px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <p style="font-size: 16px; color: rgba(255, 255, 255, 0.9); text-align: center; line-height: 1.8;">
+                        <strong>Hardware Requirement:</strong> 10% to 40% transmittance to maintain legible Ambient Contrast Ratio (ACR).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Color Robustness -->
+            <div class="content-section color-section">
+                <div class="section-label">Color Guidelines</div>
+                <h2 class="section-heading">Color Robustness in AR</h2>
+                <p class="section-text">
+                    Colors must maintain their intended perception across varying real-world backgrounds. Robustness is determined by chromaticity shift and naming accuracy.
+                </p>
+                
+                <div class="color-grid">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: linear-gradient(135deg, #3B82F6, #60A5FA);">
+                            Blue
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Blue</div>
+                            <span class="color-rating rating-excellent">EXCELLENT - PRIMARY</span>
+                            <p class="color-description">
+                                Most robust color. Should be adopted as the primary color. Use for warnings instead of red, which proves highly unreliable in AR contexts.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: linear-gradient(135deg, #2ECC71, #34D399);">
+                            Green
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Green</div>
+                            <span class="color-rating rating-excellent">EXCELLENT - 80% ACCURACY</span>
+                            <p class="color-description">
+                                High color-naming accuracy (80%) with low-to-moderate levels of shift and dispersion. Reliable for status indicators.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: linear-gradient(135deg, #F59E0B, #FBBF24);">
+                            Yellow
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Yellow</div>
+                            <span class="color-rating rating-good">GOOD - HIGH ACCURACY</span>
+                            <p class="color-description">
+                                Like green, maintains high color-naming accuracy with low-to-moderate shift. Suitable for attention elements.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: linear-gradient(135deg, #ff3b30, #F87171);">
+                            Red
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Red</div>
+                            <span class="color-rating rating-poor">POOR - AVOID</span>
+                            <p class="color-description">
+                                Performed worst in testing. Should NOT be used. A red "stop" or "warning" indicator cannot be relied upon in optical see-through AR.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: linear-gradient(135deg, #92400E, #B45309); color: white;">
+                            Brown
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Brown</div>
+                            <span class="color-rating rating-poor">POOR - 5.3% ACCURACY</span>
+                            <p class="color-description">
+                                Exhibits severe chromaticity shift and extremely low naming accuracy (5.3%). Avoid for critical UI elements.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: linear-gradient(135deg, #8B5CF6, #A78BFA);">
+                            Purple
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Purple</div>
+                            <span class="color-rating rating-good">GOOD - MODERATE</span>
+                            <p class="color-description">
+                                Moderate robustness. Suitable for secondary UI elements and decorative purposes but not critical warnings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Insight -->
+            <div class="key-insight">
+                <h4>Design Principle for AR Legibility</h4>
+                <p>
+                    Legibility in AR requires careful attention to orientation, brightness, transparency, and color selection. Use billboarding to keep text facing users, with optimal tilt between -5° and +20°. Adapt display brightness to ambient conditions (500-10,000 nits depending on environment). Maintain opacity between 25-75% for balance between visibility and see-through capability. Prioritize blue for primary UI and warnings, use green and yellow for secondary elements, and avoid red and brown for critical information. These evidence-based guidelines ensure consistent character recognition across varying real-world conditions.
+                </p>
+            </div>
+
+            <!-- Navigation Footer -->
+            <div class="nav-footer">
+                <a href="readability.html" class="nav-button prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Readability
+                </a>
+                <a href="information-density.html" class="nav-button next">
+                    Information Density
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add glassmorphism effect to secondary header on scroll
+        const secondaryHeader = document.querySelector('.secondary-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                secondaryHeader.classList.add('scrolled');
+            } else {
+                secondaryHeader.classList.remove('scrolled');
+            }
+        });
+
+        // Billboard Angle Control
+        let currentAngle = 0;
+        const billboardPanel = document.getElementById('billboardPanel');
+
+        function setAngle(angle, buttonElement) {
+            currentAngle = angle;
+            if (billboardPanel) {
+                billboardPanel.style.transform = `perspective(1000px) rotateX(${-angle}deg)`;
+                
+                // Visual feedback
+                if (angle > 20) {
+                    billboardPanel.style.opacity = '0.7';
+                } else {
+                    billboardPanel.style.opacity = '1';
+                }
+            }
+            
+            // Update active button
+            document.querySelectorAll('.control-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
+        }
+
+        // Add event listeners to buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.control-button');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const angle = parseInt(this.textContent.match(/\d+/)?.[0] || '0');
+                    setAngle(angle, this);
+                });
+            });
+        });
+
+        // Opacity Slider
+        const opacitySlider = document.getElementById('opacitySlider');
+        const opacityHandle = document.getElementById('opacityHandle');
+        const previewOverlay = document.getElementById('previewOverlay');
+        const opacityValue = document.getElementById('opacityValue');
+
+        if (opacitySlider && opacityHandle && previewOverlay && opacityValue) {
+            let isDraggingOpacity = false;
+            let currentOpacity = 50;
+
+            function updateOpacity(percentage) {
+                currentOpacity = Math.max(0, Math.min(100, percentage));
+                opacityHandle.style.left = currentOpacity + '%';
+                
+                const opacity = currentOpacity / 100;
+                previewOverlay.style.opacity = opacity;
+                opacityValue.textContent = Math.round(currentOpacity) + '%';
+                
+                // Color code the value
+                if (currentOpacity >= 25 && currentOpacity <= 75) {
+                    opacityValue.style.color = '#2ECC71';
+                } else {
+                    opacityValue.style.color = '#ff3b30';
+                }
+            }
+
+            opacityHandle.addEventListener('mousedown', (e) => {
+                isDraggingOpacity = true;
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDraggingOpacity) {
+                    const rect = opacitySlider.getBoundingClientRect();
+                    const percentage = ((e.clientX - rect.left) / rect.width) * 100;
+                    updateOpacity(percentage);
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDraggingOpacity = false;
+            });
+
+            opacitySlider.addEventListener('click', (e) => {
+                const rect = opacitySlider.getBoundingClientRect();
+                const percentage = ((e.clientX - rect.left) / rect.width) * 100;
+                updateOpacity(percentage);
+            });
+
+            // Touch support
+            opacityHandle.addEventListener('touchstart', (e) => {
+                isDraggingOpacity = true;
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (isDraggingOpacity) {
+                    const rect = opacitySlider.getBoundingClientRect();
+                    const touch = e.touches[0];
+                    const percentage = ((touch.clientX - rect.left) / rect.width) * 100;
+                    updateOpacity(percentage);
+                }
+            });
+
+            document.addEventListener('touchend', () => {
+                isDraggingOpacity = false;
+            });
+
+            // Initialize
+            updateOpacity(50);
+        }
+
+        // Scenario highlighting
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.scenario-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    document.querySelectorAll('.scenario-card').forEach(c => {
+                        c.style.transform = 'scale(1)';
+                        c.style.borderColor = 'transparent';
+                    });
+                    this.style.transform = 'translateY(-8px) scale(1.05)';
+                    this.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                });
+            });
+        });
+
+        // Animate chart bars on load
+        window.addEventListener('load', () => {
+            const chartFills = document.querySelectorAll('.chart-fill');
+            chartFills.forEach((fill, index) => {
+                setTimeout(() => {
+                    const width = fill.style.width;
+                    fill.style.width = '0';
+                    setTimeout(() => {
+                        fill.style.width = width;
+                    }, 50);
+                }, index * 200);
+            });
+        });
+
+        // Color card interactions
+        document.querySelectorAll('.color-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-10px)';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>

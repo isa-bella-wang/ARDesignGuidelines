@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - AR Design Guidelines</title>
+    <link rel="stylesheet" href="apple-styles.css">
+</head>
+<body>
+    <!-- Secondary Header -->
+    <div class="secondary-header">
+        <div class="secondary-header-content">
+            <a href="index.html" class="secondary-header-logo">AR Guidelines</a>
+            <nav class="secondary-nav">
+                <a href="index.html" class="secondary-nav-link active">Design</a>
+                <a href="#" class="secondary-nav-link">Develop</a>
+                <a href="#" class="secondary-nav-link">Book</a>
+                <a href="#" class="secondary-nav-link">About</a>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-container">
+                <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2 5H18M2 10H18M2 15H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" class="filter-input" placeholder="Filter">
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">AR DESIGN GUIDELINES</div>
+                <a href="introduction.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Introduction
+                </a>
+                <a href="getting-started.html" class="sidebar-nav-item active">
+                    <span class="chevron">></span>
+                    Getting Started
+                </a>
+                <div class="sidebar-section-title">FOUNDATIONS</div>
+                <a href="depth-distance-conflict.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Depth, Distance and Conflict
+                </a>
+                <a href="visual-field-placement.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Visual Field Placement
+                </a>
+                <a href="frames-of-reference.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Frames of Reference
+                </a>
+                <a href="readability.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Readability
+                </a>
+                <a href="legibility.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Legibility
+                </a>
+                <a href="information-density.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Information Density
+                </a>
+                <a href="interaction-zones.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Interaction Zones
+                </a>
+                <a href="types-of-input.html" class="sidebar-nav-item">
+                    <span class="chevron">></span>
+                    Types of Input
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="getting-started-header">
+                <h1 class="page-title">Getting Started</h1>
+                <p class="page-subtitle">This guide is organized as a continuous human-centered system. Each chapter builds on the previous one, moving from how the eye sees, to how the mind processes, to how the body acts.</p>
+            </div>
+
+            <div class="chapters-grid">
+                <!-- Chapter 1 -->
+                <div class="chapter-card card-1">
+                    <div class="chapter-graphic">
+                        <div class="depth-layers">
+                            <div class="depth-plane"></div>
+                            <div class="depth-plane"></div>
+                            <div class="depth-plane"></div>
+                            <div class="focal-point"></div>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-number">CHAPTER 1</div>
+                        <h2 class="chapter-title">Depth, Distance, and Visual Conflict</h2>
+                        <p class="chapter-description">Establishes how focal distance, vergence–accommodation conflict, and depth stability constrain where virtual content can be placed in 3D space.</p>
+                        <div class="chapter-defines">Defines the z-axis boundary</div>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="chapter-card card-2">
+                    <div class="chapter-graphic">
+                        <div class="field-view">
+                            <div class="fov-zone fov-outer"></div>
+                            <div class="fov-zone fov-mid"></div>
+                            <div class="fov-zone fov-center"></div>
+                            <div class="eye-icon">
+                                <div class="eye-shape">
+                                    <div class="pupil-dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-number">CHAPTER 2</div>
+                        <h2 class="chapter-title">Visual Field Placement</h2>
+                        <p class="chapter-description">Translates eye rotation limits and head movement into usable spatial layout zones based on comfort, attention, and visual acuity.</p>
+                        <div class="chapter-defines">Defines horizontal and vertical bounds</div>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="chapter-card card-3">
+                    <div class="chapter-graphic">
+                        <div class="reference-system">
+                            <div class="world-anchor"></div>
+                            <div class="head-anchor"></div>
+                            <div class="body-anchor"></div>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-number">CHAPTER 3</div>
+                        <h2 class="chapter-title">Frames of Reference</h2>
+                        <p class="chapter-description">Explains world-locked, head-locked, and body-locked content and establishes when interfaces should remain stable or move with the user.</p>
+                        <div class="chapter-defines">Defines the coordinate system</div>
+                    </div>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="chapter-card card-4">
+                    <div class="chapter-graphic">
+                        <div class="text-scale">
+                            <div class="text-sample text-large">Aa</div>
+                            <div class="text-sample text-medium">Aa</div>
+                            <div class="text-sample text-small">Aa</div>
+                            <div class="distance-marker">→ Distance</div>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-number">CHAPTER 4</div>
+                        <h2 class="chapter-title">Readability at Distance</h2>
+                        <p class="chapter-description">Translates visual angle thresholds into physical text height and spacing at different viewing distances.</p>
+                        <div class="chapter-defines">Defines the typographic floor</div>
+                    </div>
+                </div>
+
+                <!-- Chapter 5 -->
+                <div class="chapter-card card-5">
+                    <div class="chapter-graphic">
+                        <div class="contrast-demo">
+                            <div class="background-layer">
+                                <div class="bg-square"></div>
+                                <div class="bg-square"></div>
+                                <div class="bg-square"></div>
+                                <div class="bg-square"></div>
+                            </div>
+                            <div class="foreground-element"></div>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-number">CHAPTER 5</div>
+                        <h2 class="chapter-title">Legibility and Contrast</h2>
+                        <p class="chapter-description">Addresses brightness, contrast, color interaction, and transparency to ensure AR content remains visible under changing conditions.</p>
+                        <div class="chapter-defines">Defines optical visibility rules</div>
+                    </div>
+                </div>
+
+                <!-- Chapter 6 -->
+                <div class="chapter-card card-6">
+                    <div class="chapter-graphic">
+                        <div class="density-grid">
+                            <div class="info-block"></div>
+                            <div class="info-block"></div>
+                            <div class="info-block"></div>
+                            <div class="info-block"></div>
+                            <div class="info-block"></div>
+                            <div class="info-block"></div>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-number">CHAPTER 6</div>
+                        <h2 class="chapter-title">Information Density</h2>
+                        <p class="chapter-description">Applies cognitive load limits to establish how many elements can coexist without overwhelming attention or increasing error.</p>
+                        <div class="chapter-defines">Defines the cognitive ceiling</div>
+                    </div>
+                </div>
+
+                <!-- Chapter 7 -->
+                <div class="chapter-card card-7">
+                    <div class="chapter-graphic">
+                        <div class="reach-zones">
+                            <div class="reach-zone-circle zone-far"></div>
+                            <div class="reach-zone-circle zone-near"></div>
+                            <div class="body-silhouette"></div>
+                            <div class="arm arm-left"></div>
+                            <div class="arm arm-right"></div>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-number">CHAPTER 7</div>
+                        <h2 class="chapter-title">Interaction Placement</h2>
+                        <p class="chapter-description">Uses anthropometric data to establish comfortable reach zones for hands, arms, and mid-air interaction.</p>
+                        <div class="chapter-defines">Defines physical interaction envelope</div>
+                    </div>
+                </div>
+
+                <!-- Chapter 8 -->
+                <div class="chapter-card card-8">
+                    <div class="chapter-graphic">
+                        <div class="input-methods">
+                            <div class="input-icon gaze-icon"></div>
+                            <div class="input-icon gesture-icon"></div>
+                            <div class="input-icon voice-icon"></div>
+                            <div class="center-hub"></div>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-number">CHAPTER 8</div>
+                        <h2 class="chapter-title">Input Types</h2>
+                        <p class="chapter-description">Examines gaze, gesture, voice, controller, and head-based input to establish when each is perceptually reliable and ergonomically sustainable.</p>
+                        <div class="chapter-defines">Defines the control layer</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add glassmorphism effect to secondary header on scroll
+        const secondaryHeader = document.querySelector('.secondary-header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                secondaryHeader.classList.add('scrolled');
+            } else {
+                secondaryHeader.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
